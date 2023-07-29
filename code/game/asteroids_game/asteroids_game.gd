@@ -6,6 +6,7 @@ var spawn_point_width = 200
 
 
 
+
 func spawn_space_object():
 	var space_object_inst = space_object_tscn.instantiate()
 	var random_y_spawn_point = randi_range(-spawn_point_width, spawn_point_width)

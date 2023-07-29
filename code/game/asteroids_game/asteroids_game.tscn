@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8les3u6x8r6a"]
+
+[ext_resource type="Script" path="res://code/game/asteroids_game/asteroids_game.gd" id="1_r0kiy"]
+[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player.tscn" id="2_i1e01"]
+[ext_resource type="PackedScene" uid="uid://b5xboqyyh4pu4" path="res://code/game/celestials/nonliving/space_object.tscn" id="3_ltvab"]
+
+[node name="AsteroidsGame" type="Node2D"]
+script = ExtResource("1_r0kiy")
+space_object_tscn = ExtResource("3_ltvab")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="SpaceColor" type="ColorRect" parent="ParallaxBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_i1e01")]
+position = Vector2(101, 179)
+
+[node name="NonlivingSpawn" type="Node2D" parent="."]
+position = Vector2(565, 180)

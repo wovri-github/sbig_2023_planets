@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://03v5ce72xk1p"]
+
+[ext_resource type="Script" path="res://code/ui/main_screen.gd" id="1_kg0rm"]
+[ext_resource type="PackedScene" uid="uid://d2ruirci6oic6" path="res://code/ui/menu/main_menu.tscn" id="1_kw6wf"]
+[ext_resource type="PackedScene" uid="uid://cwjv8jaayivo0" path="res://code/ui/menu/settings.tscn" id="2_jbkk5"]
+[ext_resource type="PackedScene" uid="uid://c0r44eqs2nhnb" path="res://code/ui/menu/credits.tscn" id="3_cor1s"]
+
+[node name="MainScreen" type="CanvasLayer"]
+script = ExtResource("1_kg0rm")
+
+[node name="MainMenu" parent="." instance=ExtResource("1_kw6wf")]
+offset_top = -116.0
+offset_bottom = 116.0
+
+[node name="Settings" parent="." instance=ExtResource("2_jbkk5")]
+visible = false
+
+[node name="Credits" parent="." instance=ExtResource("3_cor1s")]
+visible = false
+
+[connection signal="open_credits" from="MainMenu" to="." method="_on_main_menu_open_credits"]
+[connection signal="open_settings" from="MainMenu" to="." method="_on_main_menu_open_settings"]
+[connection signal="play_game" from="MainMenu" to="." method="_on_main_menu_play_game"]

@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5xboqyyh4pu4"]
+[gd_scene load_steps=5 format=3 uid="uid://b5xboqyyh4pu4"]
 
 [ext_resource type="Texture2D" uid="uid://dxmmy4i1ahh7q" path="res://assets/white_circle.png" id="1_1gkf8"]
 [ext_resource type="Script" path="res://code/game/celestials/nonliving/space_object.gd" id="1_hk2n4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_71bg3"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0nao6"]
 radius = 53.0094
@@ -9,7 +13,10 @@ radius = 53.0094
 [node name="SpaceObject" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_71bg3")
 gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
 linear_damp_mode = 1
 script = ExtResource("1_hk2n4")
 
@@ -27,8 +34,11 @@ texture = ExtResource("1_1gkf8")
 position = Vector2(2.38419e-06, 0)
 scale = Vector2(7, 7)
 
-[node name="LifeTime" type="Timer" parent="."]
-wait_time = 120.0
+[node name="NotVisibleLifeTime" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
-[connection signal="timeout" from="LifeTime" to="." method="_on_life_time_timeout"]
+[connection signal="timeout" from="NotVisibleLifeTime" to="." method="_on_life_time_timeout"]

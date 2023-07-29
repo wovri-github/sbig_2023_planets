@@ -22,4 +22,9 @@ color = Color(0.164706, 0.164706, 0.164706, 1)
 position = Vector2(101, 179)
 
 [node name="NonlivingSpawn" type="Node2D" parent="."]
-position = Vector2(565, 180)
+position = Vector2(900, 180)
+
+[node name="SpawnTimer" type="Timer" parent="NonlivingSpawn"]
+autostart = true
+
+[connection signal="timeout" from="NonlivingSpawn/SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://j6uyq1jiernl"]
+
+[ext_resource type="Script" path="res://code/game/minigame/turn fight/turn_fight.gd" id="1_830ul"]
+
+[node name="TurnFight" type="CanvasLayer"]
+script = ExtResource("1_830ul")
+
+[node name="FightMenu" type="PanelContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="FightMenu"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FightMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FightMenu/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FightMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Attack" type="Button" parent="FightMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Attack"
+
+[node name="Defend" type="Button" parent="FightMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Defend"

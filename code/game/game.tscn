@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://drqy8abjokm4s"]
+
+[ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
+[ext_resource type="PackedScene" uid="uid://b8les3u6x8r6a" path="res://code/game/minigame/asteroids_game/asteroids_game.tscn" id="2_y2rs1"]
+[ext_resource type="PackedScene" uid="uid://chifna77xw1ep" path="res://code/game/background.tscn" id="3_xuqvg"]
+[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player.tscn" id="4_qviwy"]
+[ext_resource type="PackedScene" uid="uid://j6uyq1jiernl" path="res://code/game/minigame/turn fight/turn_fight.tscn" id="5_4t51o"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_6tnbp")
+
+[node name="Background" parent="." instance=ExtResource("3_xuqvg")]
+
+[node name="AsteroidsGame" parent="." instance=ExtResource("2_y2rs1")]
+
+[node name="TurnFight" parent="." instance=ExtResource("5_4t51o")]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource("4_qviwy")]
+position = Vector2(83, 158)
+
+[node name="Debug" type="Node" parent="."]
+
+[node name="ChangeToAsteroids" type="Button" parent="Debug"]
+offset_right = 162.0
+offset_bottom = 37.0
+text = "Change to asteroids"
+
+[node name="ChangeToTurnFight" type="Button" parent="Debug"]
+offset_left = -1.0
+offset_top = 37.0
+offset_right = 159.0
+offset_bottom = 74.0
+text = "Change to turnfight"
+
+[connection signal="pressed" from="Debug/ChangeToAsteroids" to="." method="_on_change_to_asteroids_pressed"]
+[connection signal="pressed" from="Debug/ChangeToTurnFight" to="." method="_on_change_to_turn_fight_pressed"]

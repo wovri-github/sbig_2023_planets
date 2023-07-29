@@ -1,4 +1,4 @@
-extends Node2D
+extends Minigame
 
 @export var space_object_tscn: PackedScene
 var spawn_point_width = 200
@@ -6,6 +6,8 @@ var spawn_point_width = 200
 
 
 
+func enter():
+	print("asteroids!")
 
 func spawn_space_object():
 	var space_object_inst = space_object_tscn.instantiate()

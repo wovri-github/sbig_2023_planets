@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://j6uyq1jiernl"]
 
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/turn_fight.gd" id="1_830ul"]
-[ext_resource type="Script" path="res://code/game/celestials/player/fight_player.gd" id="2_bhjdj"]
+[ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_player.gd" id="2_mma2m"]
 [ext_resource type="Resource" uid="uid://crn3a233avhyp" path="res://code/game/celestials/player/player_statistics.tres" id="3_nsf70"]
 [ext_resource type="Resource" uid="uid://lpdlk4v6v612" path="res://code/game/celestials/enemies/planet1_statistics.tres" id="4_i2sfq"]
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_enemy.gd" id="5_jwdx6"]
@@ -11,7 +11,7 @@
 script = ExtResource("1_830ul")
 
 [node name="Player" type="Node" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
-script = ExtResource("2_bhjdj")
+script = ExtResource("2_mma2m")
 fight_manager = NodePath("../FightManager")
 enemy = NodePath("../Enemy")
 own_stats = ExtResource("3_nsf70")

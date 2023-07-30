@@ -5,6 +5,8 @@ var spawn_point_width = 200
 @onready var nonliving_spawn_point = $NonlivingSpawn
 
 
+func enter(data):
+	$GameTime.start()
 
 
 func spawn_space_object():
@@ -17,3 +19,7 @@ func spawn_space_object():
 
 func _on_spawn_timer_timeout():
 	spawn_space_object()
+
+
+func _on_game_time_timeout():
+	emit_signal("minigame_ended")

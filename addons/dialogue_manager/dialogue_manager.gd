@@ -54,6 +54,7 @@ enum TranslationSource {
 	PO
 }
 
+var own_balloon_tscn = preload("res://code/own_dialogue_box/balloon.tscn")
 
 # The list of globals that dialogue can query
 var game_states: Array = []
@@ -231,9 +232,10 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(resource, title, extra_game_states)
 
+
+
 func show_dialogue_balloon(resource: DialogueResource, title: String = "0", extra_game_states: Array = []) -> void:
-	var ExampleBalloonScene = load("res://dialogues/balloon.tscn")
-	var balloon: Node = ExampleBalloonScene.instantiate()
+	var balloon: Node = own_balloon_tscn.instantiate()
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(resource, title, extra_game_states)
 

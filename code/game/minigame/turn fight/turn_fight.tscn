@@ -2,25 +2,31 @@
 
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/turn_fight.gd" id="1_830ul"]
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_player.gd" id="2_mma2m"]
-[ext_resource type="Resource" uid="uid://crn3a233avhyp" path="res://code/game/celestials/player/player_statistics.tres" id="3_nsf70"]
-[ext_resource type="Resource" uid="uid://lpdlk4v6v612" path="res://code/game/celestials/enemies/planet1_statistics.tres" id="4_i2sfq"]
+[ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="4_a64nh"]
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_enemy.gd" id="5_jwdx6"]
+[ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="5_vm6v0"]
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_manager.gd" id="6_i3g3t"]
 
 [node name="TurnFight" type="CanvasLayer"]
 script = ExtResource("1_830ul")
 
-[node name="Player" type="Node" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
+[node name="Player" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
 script = ExtResource("2_mma2m")
 fight_manager = NodePath("../FightManager")
 enemy = NodePath("../Enemy")
-own_stats = ExtResource("3_nsf70")
 
-[node name="Enemy" type="Node" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
+[node name="Planet" parent="Player" instance=ExtResource("4_a64nh")]
+modulate = Color(0.156863, 0.788235, 0.870588, 1)
+position = Vector2(103, 126)
+planet_resource = ExtResource("5_vm6v0")
+
+[node name="Enemy" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
 script = ExtResource("5_jwdx6")
 fight_manager = NodePath("../FightManager")
 enemy = NodePath("../Player")
-own_stats = ExtResource("4_i2sfq")
+
+[node name="Planet" parent="Enemy" instance=ExtResource("4_a64nh")]
+position = Vector2(556, 137)
 
 [node name="FightManager" type="PanelContainer" parent="."]
 anchors_preset = 12

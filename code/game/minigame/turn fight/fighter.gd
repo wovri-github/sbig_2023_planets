@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name Fighter
 
 signal defeated()
@@ -8,17 +8,22 @@ enum TYPE{PLAYER, ENEMY}
 
 @export var fight_manager: Node
 @export var enemy: Fighter
-@export var own_stats: FightStatistics
+var planet_res: PlanetResource:
+	set(new_planet):
+		planet_res = new_planet
+		$Planet.planet_resource = planet_res
+		max_health = planet_res.health
+		damage = planet_res.damage
+		current_health = max_health
+		fight_manager.set_hp(fighter, current_health, max_health)
 var fighter: TYPE
-@onready var max_health: int = own_stats.health
-@onready var damage: int = own_stats.damage
-@onready var current_health: int = max_health
+var max_health: int
+var damage: int
+var current_health: int
 
 
 
-func _ready():
-	await get_tree().process_frame
-	fight_manager.set_hp(fighter, current_health, max_health)
+
 
 func _start_turn():
 	start_turn()

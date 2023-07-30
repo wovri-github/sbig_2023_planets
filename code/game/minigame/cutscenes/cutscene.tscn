@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://2efols75kede"]
+[gd_scene load_steps=5 format=3 uid="uid://2efols75kede"]
 
 [ext_resource type="Script" path="res://code/game/minigame/cutscenes/cutscene.gd" id="1_n6xvg"]
-[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://dialogues/test.dialogue" id="2_hu4ga"]
+[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="2_j14vh"]
+[ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="3_bjr87"]
+[ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="4_kxeb8"]
 
 [node name="Cutscene" type="CanvasLayer"]
 script = ExtResource("1_n6xvg")
-dialoge = ExtResource("2_hu4ga")
+dialoge = ExtResource("2_j14vh")
 
 [node name="UpBorder" type="ColorRect" parent="."]
 anchors_preset = 10
@@ -21,3 +23,11 @@ offset_top = 300.0
 offset_bottom = 360.0
 grow_horizontal = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Enemy" parent="." instance=ExtResource("3_bjr87")]
+position = Vector2(552, 171)
+
+[node name="Player" parent="." instance=ExtResource("3_bjr87")]
+modulate = Color(0.156863, 0.788235, 0.870588, 1)
+position = Vector2(90, 170)
+planet_resource = ExtResource("4_kxeb8")

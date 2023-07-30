@@ -3,9 +3,9 @@ extends Fighter
 
 @onready var action_buttons = %Buttons.get_children()
 
-
 func _init():
 	fighter = Fighter.TYPE.PLAYER
+
 
 func start_turn():
 	for button in action_buttons:

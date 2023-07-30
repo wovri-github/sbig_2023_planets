@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="FightStatistics" load_steps=2 format=3 uid="uid://crn3a233avhyp"]
-
-[ext_resource type="Script" path="res://code/game/celestials/fight_statistic.gd" id="1_nsejm"]
-
-[resource]
-script = ExtResource("1_nsejm")
-name = "Pick me"
-health = 100
-damage = 12

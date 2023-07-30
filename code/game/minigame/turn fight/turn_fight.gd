@@ -1,7 +1,5 @@
 extends Minigame
 
-signal turn_fight_ended()
-
 enum TURN{PLAYER, ENEMY}
 var current_turn: Fighter
 @onready var celestials = {
@@ -9,10 +7,16 @@ var current_turn: Fighter
 	TURN.ENEMY: $Enemy,
 }
 
-func _ready():
-	enter()
+#func _ready():
+#	var data = MinigameData.new()
+#	data.f_enemy_res = load("res://resources/planet/planet1.tres")
+#	enter(data)
 
-func enter():
+
+
+func enter(data: MinigameData):
+	$Enemy.planet_res = data.f_enemy_res
+	$Player.planet_res = $Player/Planet.planet_resource
 	current_turn = celestials[TURN.PLAYER]
 	current_turn._start_turn()
 
@@ -39,4 +43,4 @@ func _on_player_defeated():
 
 func _on_enemy_defeated():
 	current_turn._end_turn()
-	print("Enemy defeated!")
+	emit_signal("minigame_ended")

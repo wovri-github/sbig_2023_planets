@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://2efols75kede"]
+
+[ext_resource type="Script" path="res://code/game/minigame/cutscenes/cutscene.gd" id="1_n6xvg"]
+[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://dialogues/test.dialogue" id="2_hu4ga"]
+
+[node name="Cutscene" type="CanvasLayer"]
+script = ExtResource("1_n6xvg")
+dialoge = ExtResource("2_hu4ga")
+
+[node name="UpBorder" type="ColorRect" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DownBorder" type="ColorRect" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 300.0
+offset_bottom = 360.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)

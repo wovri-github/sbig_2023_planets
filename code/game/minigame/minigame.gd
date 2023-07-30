@@ -1,18 +1,20 @@
 extends CanvasLayer
 class_name Minigame
 
-enum {ASTEROIDS, TURN_FIGHT}
+signal minigame_ended()
+
+enum TYPE{CUTSCENE, ASTEROIDS, TURN_FIGHT}
 
 
 func _enter():
+	enter()
 	self.show()
 	self.set_process_mode(PROCESS_MODE_INHERIT)
-	enter()
 
 func _exit():
+	exit()
 	self.hide()
 	self.set_process_mode(PROCESS_MODE_DISABLED)
-	exit()
 
 
 func enter():

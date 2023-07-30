@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://b84u2eyirjbhr"]
+
+[ext_resource type="Script" path="res://code/ui/menu/fight_menu.gd" id="1_dl8e6"]
+
+[node name="FightMenu" type="PanelContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_dl8e6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PlayerHP" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PlayerHP"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Hp: "
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/PlayerHP"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+step = 1.0
+value = 70.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Attack" type="Button" parent="MarginContainer/HBoxContainer/Buttons"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Attack"
+
+[node name="Defend" type="Button" parent="MarginContainer/HBoxContainer/Buttons"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Defend"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="EnemyHP" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/EnemyHP"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Hp: "
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/EnemyHP"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+step = 1.0
+value = 70.0
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Buttons/Attack" to="." method="_on_attack_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/Buttons/Defend" to="." method="_on_defend_button_down"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
 [ext_resource type="PackedScene" uid="uid://b8les3u6x8r6a" path="res://code/game/minigame/asteroids_game/asteroids_game.tscn" id="2_y2rs1"]
 [ext_resource type="PackedScene" uid="uid://chifna77xw1ep" path="res://code/game/background.tscn" id="3_xuqvg"]
-[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player.tscn" id="4_qviwy"]
+[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/asteroid_player.tscn" id="4_qviwy"]
 [ext_resource type="PackedScene" uid="uid://j6uyq1jiernl" path="res://code/game/minigame/turn fight/turn_fight.tscn" id="5_4t51o"]
 
 [node name="Game" type="Node"]

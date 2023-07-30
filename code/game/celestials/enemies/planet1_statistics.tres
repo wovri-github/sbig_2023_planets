@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FightStatistics" load_steps=2 format=3 uid="uid://lpdlk4v6v612"]
+
+[ext_resource type="Script" path="res://code/game/celestials/fight_statistic.gd" id="1_k554t"]
+
+[resource]
+script = ExtResource("1_k554t")
+name = "Planet1"
+health = 50
+damage = 10

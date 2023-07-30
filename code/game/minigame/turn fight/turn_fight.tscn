@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://j6uyq1jiernl"]
+[gd_scene load_steps=7 format=3 uid="uid://j6uyq1jiernl"]
 
 [ext_resource type="Script" path="res://code/game/minigame/turn fight/turn_fight.gd" id="1_830ul"]
+[ext_resource type="Script" path="res://code/game/celestials/player/fight_player.gd" id="2_bhjdj"]
+[ext_resource type="Resource" uid="uid://crn3a233avhyp" path="res://code/game/celestials/player/player_statistics.tres" id="3_nsf70"]
+[ext_resource type="Resource" uid="uid://lpdlk4v6v612" path="res://code/game/celestials/enemies/planet1_statistics.tres" id="4_i2sfq"]
+[ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_enemy.gd" id="5_jwdx6"]
+[ext_resource type="Script" path="res://code/game/minigame/turn fight/fight_manager.gd" id="6_i3g3t"]
 
 [node name="TurnFight" type="CanvasLayer"]
 script = ExtResource("1_830ul")
 
-[node name="FightMenu" type="PanelContainer" parent="."]
+[node name="Player" type="Node" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
+script = ExtResource("2_bhjdj")
+fight_manager = NodePath("../FightManager")
+enemy = NodePath("../Enemy")
+own_stats = ExtResource("3_nsf70")
+
+[node name="Enemy" type="Node" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
+script = ExtResource("5_jwdx6")
+fight_manager = NodePath("../FightManager")
+enemy = NodePath("../Player")
+own_stats = ExtResource("4_i2sfq")
+
+[node name="FightManager" type="PanelContainer" parent="."]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -13,26 +30,78 @@ anchor_bottom = 1.0
 offset_top = -120.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("6_i3g3t")
 
-[node name="MarginContainer" type="MarginContainer" parent="FightMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="FightManager"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="FightMenu/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="FightManager/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayerHP" type="ProgressBar" parent="FightManager/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="FightManager/MarginContainer/HBoxContainer/PlayerHP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 10/20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="FightManager/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="FightMenu/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+[node name="Buttons" type="VBoxContainer" parent="FightManager/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="FightMenu/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Attack" type="Button" parent="FightMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Attack" type="Button" parent="FightManager/MarginContainer/HBoxContainer/Buttons"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 text = "Attack"
 
-[node name="Defend" type="Button" parent="FightMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Defend" type="Button" parent="FightManager/MarginContainer/HBoxContainer/Buttons"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 text = "Defend"
+
+[node name="MarginContainer2" type="MarginContainer" parent="FightManager/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="EnemyHP" type="ProgressBar" parent="FightManager/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="FightManager/MarginContainer/HBoxContainer/EnemyHP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 10/20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="defeated" from="Player" to="." method="_on_player_defeated"]
+[connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
+[connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]
+[connection signal="turn_ended" from="Enemy" to="." method="_on_enemy_turn_ended"]
+[connection signal="pressed" from="FightManager/MarginContainer/HBoxContainer/Buttons/Attack" to="Player" method="_on_attack_pressed"]
+[connection signal="pressed" from="FightManager/MarginContainer/HBoxContainer/Buttons/Defend" to="Player" method="_on_defend_pressed"]

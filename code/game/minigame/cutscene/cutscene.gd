@@ -1,12 +1,20 @@
+@tool
 extends Minigame
 
 @export var dialoge: DialogueResource
+@export var is_debug = true
 @onready var player: Planet = $Player
 @onready var enemy: Planet = $Enemy
 
 
 
 func _ready():
+	if Engine.is_editor_hint():
+		return
+	if is_debug:
+		enter(load("res://resources/minigame_data/intro.tres"))
+	else:
+		self.process_mode = Node.PROCESS_MODE_DISABLED
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 func enter(data: MinigameData):

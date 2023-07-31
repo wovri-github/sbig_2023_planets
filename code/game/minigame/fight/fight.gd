@@ -1,3 +1,4 @@
+@tool
 extends Minigame
 
 enum TURN{PLAYER, ENEMY}
@@ -8,6 +9,8 @@ var current_turn: Fighter
 }
 
 #func _ready():
+#	if Engine.is_editor_hint():
+#		return
 #	var data = MinigameData.new()
 #	data.f_enemy_res = load("res://resources/planet/planet1.tres")
 #	enter(data)

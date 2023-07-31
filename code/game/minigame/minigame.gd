@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name Minigame
 
-signal minigame_ended()
+signal minigame_ended(is_success)
 
 @export var is_visible: bool = true:
 	set(new_value):

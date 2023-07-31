@@ -12,14 +12,17 @@ space_object_tscn = ExtResource("2_fj1ny")
 position = Vector2(900, 180)
 
 [node name="SpawnTimer" type="Timer" parent="NonlivingSpawn"]
-autostart = true
 
 [node name="Player" parent="." instance=ExtResource("3_vivk2")]
 position = Vector2(120, 150)
+
+[node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="Player"]
+scale = Vector2(9.3, 9.2)
 
 [node name="GameTime" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
 
 [connection signal="timeout" from="NonlivingSpawn/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="screen_exited" from="Player/VisibleOnScreenNotifier2D2" to="." method="_on_visible_on_screen_notifier_2d_2_screen_exited"]
 [connection signal="timeout" from="GameTime" to="." method="_on_game_time_timeout"]

@@ -37,5 +37,9 @@ func next_game_plot():
 	change_current_game(minigame_data.minigame_type, minigame_data)
 	
 
-func _on_minigame_ended():
-	next_game_plot()
+func _on_minigame_ended(is_success):
+	if is_success:
+		next_game_plot()
+	else:
+		var minigame_data = plot_minigames[plot_tracker]
+		change_current_game(minigame_data.minigame_type, minigame_data)

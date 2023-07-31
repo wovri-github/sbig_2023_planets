@@ -42,8 +42,8 @@ func _on_enemy_turn_ended():
 
 func _on_player_defeated():
 	current_turn._end_turn()
-	print("Playyer defeated!")
+	emit_signal("minigame_ended", false)
 
 func _on_enemy_defeated():
 	current_turn._end_turn()
-	emit_signal("minigame_ended")
+	emit_signal("minigame_ended", true)

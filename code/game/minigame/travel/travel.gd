@@ -10,17 +10,24 @@ var default_position = Vector2(120, 150)
 @onready var nonliving_spawn_point = $NonlivingSpawn
 @onready var spawn_timer = $NonlivingSpawn/SpawnTimer
 
+
+
 func _ready():
 	if Engine.is_editor_hint():
 		return
 	if is_debug:
-		enter({})
+		enter()
+		minigame_ended.connect(enter)
 	else:
 		self.process_mode = Node.PROCESS_MODE_DISABLED
 
-func enter(data):
+func enter(data = {}):
 	$GameTime.start()
+	spawn_timer.start()
+	player.position = Defaults.START_POSITION
 
+func kill_player():
+	emit_signal("minigame_ended", false)
 
 func spawn_space_object():
 	var space_object_inst = space_object_tscn.instantiate()
@@ -43,4 +50,10 @@ func _on_game_time_timeout():
 	var time = distance / player.speed
 	tween.tween_property(player, "position", default_position, time)
 	await tween.finished
-	emit_signal("minigame_ended")
+	emit_signal("minigame_ended", true)
+
+
+func _on_visible_on_screen_notifier_2d_2_screen_exited():
+	if $GameTime.is_stopped():
+		return
+	kill_player()

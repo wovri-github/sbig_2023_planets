@@ -20,7 +20,7 @@ func _ready():
 func enter(data: MinigameData):
 	if data.c_dialoge_res == null:
 		printerr("[Cutscene]: Cutscene Entered but dialogue not found!")
-		emit_signal("minigame_ended")
+		emit_signal("minigame_ended", true)
 		return
 	dialoge = data.c_dialoge_res
 	if data.c_enemy_res == null:
@@ -31,4 +31,4 @@ func enter(data: MinigameData):
 	DialogueManager.show_dialogue_balloon(dialoge)
 
 func _on_dialogue_ended(_resource):
-	emit_signal("minigame_ended")
+	emit_signal("minigame_ended", true)

@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 
+var player: Node
+var enemy: Node
+
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
@@ -35,7 +38,18 @@ var dialogue_line: DialogueLine:
 			child.queue_free()
 
 		dialogue_line = next_dialogue_line
-
+		
+		if is_instance_valid(enemy) and is_instance_valid(player):
+			if dialogue_line.character == player.dialogue_name:
+				player.highlight = true
+				enemy.highlight = false
+			elif dialogue_line.character == enemy.dialogue_name:
+				player.highlight = false
+				enemy.highlight = true
+			else:
+				player.highlight = false
+				enemy.highlight = false
+		
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
 

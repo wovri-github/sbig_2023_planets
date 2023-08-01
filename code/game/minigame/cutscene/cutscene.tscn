@@ -1,17 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://2efols75kede"]
+[gd_scene load_steps=9 format=3 uid="uid://2efols75kede"]
 
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/cutscene.gd" id="1_haevn"]
-[ext_resource type="Resource" uid="uid://d3265mbq6hw7t" path="res://resources/dialogues/intro.dialogue" id="2_hcpfa"]
+[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="2_i8qk4"]
+[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="3_oo8ls"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="3_rntc7"]
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/UI.gd" id="3_vt2jm"]
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="4_3jycv"]
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="4_kpwdq"]
+
+[sub_resource type="Resource" id="Resource_d8gu6"]
+script = ExtResource("4_kpwdq")
+minigame_type = 0
+c_dialoge_res = ExtResource("2_i8qk4")
+c_enemy_res = ExtResource("3_oo8ls")
 
 [node name="Cutscene" type="CanvasLayer"]
 offset = Vector2(0, -30)
 transform = Transform2D(1, 0, 0, 1, 0, -30)
 follow_viewport_enabled = true
 script = ExtResource("1_haevn")
-dialoge = ExtResource("2_hcpfa")
+minigame_debug_data = SubResource("Resource_d8gu6")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_vt2jm")
@@ -32,9 +40,11 @@ grow_horizontal = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Enemy" parent="." instance=ExtResource("3_rntc7")]
+unique_name_in_owner = true
 position = Vector2(552, 171)
 
 [node name="Player" parent="." instance=ExtResource("3_rntc7")]
+unique_name_in_owner = true
 modulate = Color(0.156863, 0.788235, 0.870588, 1)
 position = Vector2(120, 180)
 planet_resource = ExtResource("4_3jycv")

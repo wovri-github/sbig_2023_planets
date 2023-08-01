@@ -1,6 +1,7 @@
 @tool
 extends Minigame
 
+
 @export var space_object_tscn: PackedScene
 @export var sec_before_stoping_spawn: float = 3
 @export var is_debug: bool = true

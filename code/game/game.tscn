@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drqy8abjokm4s"]
+[gd_scene load_steps=14 format=3 uid="uid://drqy8abjokm4s"]
 
 [ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
 [ext_resource type="Resource" uid="uid://dr76frs0beqo6" path="res://resources/minigame_data/intro.tres" id="2_dsky2"]
@@ -8,7 +8,6 @@
 [ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="4_71lio"]
 [ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="4_csirg"]
 [ext_resource type="PackedScene" uid="uid://j6uyq1jiernl" path="res://code/game/minigame/fight/fight.tscn" id="5_4t51o"]
-[ext_resource type="Resource" uid="uid://syelkxn4mm6a" path="res://resources/planet/test_planet.tres" id="5_adoog"]
 [ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="6_q3hn2"]
 [ext_resource type="Resource" uid="uid://ckdy2cnh7phpo" path="res://resources/minigame_data/outro.tres" id="7_r1luj"]
 
@@ -20,7 +19,7 @@ minigame_type = 1
 script = ExtResource("4_csirg")
 minigame_type = 0
 c_dialoge_res = ExtResource("4_71lio")
-c_enemy_res = ExtResource("5_adoog")
+c_enemy_res = ExtResource("6_q3hn2")
 
 [sub_resource type="Resource" id="Resource_m0ooo"]
 script = ExtResource("4_csirg")
@@ -42,6 +41,7 @@ is_visible = false
 [node name="Travel" parent="." instance=ExtResource("2_y2rs1")]
 visible = false
 follow_viewport_enabled = true
+is_debug = false
 is_visible = false
 
 [node name="Fight" parent="." instance=ExtResource("5_4t51o")]

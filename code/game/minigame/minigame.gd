@@ -15,14 +15,14 @@ enum TYPE{CUTSCENE, TRAVEL, FIGHT}
 
 
 func _enter(data):
-	enter(data)
 	is_visible = true
 	self.set_process_mode(PROCESS_MODE_INHERIT)
+	enter(data)
 
 func _exit():
-	exit()
 	is_visible = false
 	self.set_process_mode(PROCESS_MODE_DISABLED)
+	exit()
 
 
 func enter(_data):

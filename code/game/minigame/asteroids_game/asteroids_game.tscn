@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8les3u6x8r6a"]
+
+[ext_resource type="Script" path="res://code/game/minigame/asteroids_game/asteroids_game.gd" id="1_c334i"]
+[ext_resource type="PackedScene" uid="uid://b5xboqyyh4pu4" path="res://code/game/celestials/nonliving/space_object.tscn" id="2_fj1ny"]
+[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player_travel.tscn" id="3_vivk2"]
+
+[node name="AsteroidsGame" type="CanvasLayer"]
+script = ExtResource("1_c334i")
+space_object_tscn = ExtResource("2_fj1ny")
+
+[node name="NonlivingSpawn" type="Node2D" parent="."]
+position = Vector2(900, 180)
+
+[node name="SpawnTimer" type="Timer" parent="NonlivingSpawn"]
+autostart = true
+
+[node name="AsteroidPlayer" parent="." instance=ExtResource("3_vivk2")]
+position = Vector2(83, 178)
+
+[node name="GameTime" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="timeout" from="NonlivingSpawn/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="GameTime" to="." method="_on_game_time_timeout"]

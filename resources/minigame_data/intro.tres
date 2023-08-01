@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MinigameData" load_steps=3 format=3 uid="uid://dr76frs0beqo6"]
+
+[ext_resource type="Resource" uid="uid://d3265mbq6hw7t" path="res://resources/dialogues/intro.dialogue" id="1_pifia"]
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="1_sqs0l"]
+
+[resource]
+script = ExtResource("1_sqs0l")
+minigame_type = 0
+c_dialoge_res = ExtResource("1_pifia")

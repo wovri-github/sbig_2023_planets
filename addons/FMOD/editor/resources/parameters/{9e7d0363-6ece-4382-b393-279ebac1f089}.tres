@@ -1,0 +1,19 @@
+[gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://h8edn1ev1vek"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_imuth"]
+data1 = 1038224652
+data2 = 2775775043
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag"]
+name = "Person Speaking"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_imuth")
+maximum = 4.0
+flags = 28
+guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
+
+[resource]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag")
+labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
+path = "parameter:/Person Speaking"
+guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
+name = "Person Speaking"

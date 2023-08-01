@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://choio6by78xlk"
+path="res://.godot/imported/capture-0000.wav-9fc0dfa001d8f93573e0edf95524c928.sample"
+
+[deps]
+
+source_file="res://fmod project/sbig2023/Metadata/ProfilerSession/{777e98f8-f17d-4b4d-9257-5f429290b6f3}/capture-0000.wav"
+dest_files=["res://.godot/imported/capture-0000.wav-9fc0dfa001d8f93573e0edf95524c928.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

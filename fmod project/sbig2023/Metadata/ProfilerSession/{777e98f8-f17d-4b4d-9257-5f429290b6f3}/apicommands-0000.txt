@@ -1,0 +1,991 @@
+Playback::frame, 0
+Playback::version, 2, 131604
+#
+# FMOD v2.02.14 command capture
+#   System::setSoftwareChannels(numsoftwarechannels: 32)
+#   System::setDSPBufferSize(bufferlength: 512, numbuffers: 4)
+#   System::setSoftwareFormat(samplerate: 48000, speakermode: 3, numrawspeakers: 2)
+#   System::setAdvancedSettings(settings: {maxMPEGCodecs: 0, maxADPCMCodecs: 0, maxXMACodecs: 0, maxVorbisCodecs: 32, maxAT9Codecs: 0, maxFADPCMCodecs: 32, maxPCMCodecs: 0, maxOpusCodecs: 0
+#       ASIONumChannels: 0, vol0virtualvol: 0, defaultDecodeBufferSize: 400, geometryMaxFadeTime: 0,
+#       distanceFilterCenterFreq: 1500, reverb3Dinstance: 0, DSPBufferPoolSize: 8, resamplerMethod: 2, randomSeed: 907})
+#   Studio::System::setAdvancedSettings(settings: {commandqueuesize: 32768, handleinitialsize: 65536, studioupdateperiod: 20, idlesampledatapoolsize: 262144})
+#   Studio::System::initialize(maxchannels: 128, studioflags: 0x00000001, flags: 0x00030004)
+#
+Playback::frame, 0
+# Printing initial instance state
+System::loadBankFile, res://fmod project/sbig2023/Banks/Desktop/Master.bank, 0, 2097152
+Playback::loadBankFinished, {5d899cd3-a82d-440a-9ef5-e5d5b57f9033}, 2097152, 0
+System::loadBankFile, res://fmod project/sbig2023/Banks/Desktop/Characters.bank, 0, 2097408
+Playback::loadBankFinished, {86309e27-edeb-403d-995c-fd45db8e4643}, 2097408, 0
+System::setListenerAttributes, 0, {{0,0,0},{0,0,0},{0,0,1},{0,1,0}}, {0,0,0}, true
+# Finished printing initial instance state
+Playback::frame, 48128
+Playback::frame, 48128
+Playback::frame, 48128
+Playback::frame, 48128
+Playback::frame, 14336
+System::getEventByID, {a34eec7e-2661-4c0e-9019-b4fdb2e04562}, 2097664
+EventDescription::loadSampleData, 2097664
+EventDescription::createInstance, 2097664, 2098944
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::setParameterByID, 2098944, {1038224652,2775775043}, 1, false
+EventInstance::start, 2098944
+EventInstance::start, 2098944
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::start, 2098944
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+Playback::frame, 1024
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,0},{0,0,0},{-0,-0,-1},{0,1,0}}

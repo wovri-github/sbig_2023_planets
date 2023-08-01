@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://code/own_dialogue_box/balloon.gd" id="1_aj661"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_h87yd"]
+[ext_resource type="EventAsset" uid="uid://bf6vxudi5rah8" path="res://addons/FMOD/editor/resources/events/{a34eec7e-2661-4c0e-9019-b4fdb2e04562}.tres" id="3_vbx6x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d24i"]
 content_margin_left = 40.0
@@ -17,82 +18,23 @@ content_margin_right = 5.0
 content_margin_bottom = 5.0
 draw_center = false
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_devac"]
-data1 = 2591626142
-data2 = 3285421124
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ks8x7"]
-name = "pickme speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_devac")
-maximum = 1.0
-guid = "{4aef8ba1-eb29-467d-8fc1-33b81010fab3}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_qhchc"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ks8x7")
-path = "parameter:/pickme speaking"
-guid = "{4aef8ba1-eb29-467d-8fc1-33b81010fab3}"
-name = "pickme speaking"
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_373of"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_imuth"]
 data1 = 1038224652
 data2 = 2775775043
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_vjd44"]
-name = "Nobody Speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_373of")
-maximum = 1.0
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag"]
+name = "Person Speaking"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_imuth")
+maximum = 4.0
+flags = 28
 guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
 
-[sub_resource type="ParameterAsset" id="ParameterAsset_usihv"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_vjd44")
-path = "parameter:/Nobody Speaking"
+[sub_resource type="ParameterAsset" id="ParameterAsset_g8d5i"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag")
+labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
+path = "parameter:/Person Speaking"
 guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
-name = "Nobody Speaking"
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_ntxuy"]
-data1 = 2790135901
-data2 = 2983773992
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_bx8mg"]
-name = "coocoo speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_ntxuy")
-maximum = 1.0
-guid = "{abca0b70-abd1-4ead-8ac0-97f726ce9bdd}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_bn4ft"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_bx8mg")
-path = "parameter:/coocoo speaking"
-guid = "{abca0b70-abd1-4ead-8ac0-97f726ce9bdd}"
-name = "coocoo speaking"
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_0sqks"]
-data1 = 311622411
-data2 = 2142302123
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_j8ekg"]
-name = "sun speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_0sqks")
-maximum = 1.0
-guid = "{d81b4b54-c73a-4cc3-b6f9-5e15b71cb57b}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_01kxp"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_j8ekg")
-path = "parameter:/sun speaking"
-guid = "{d81b4b54-c73a-4cc3-b6f9-5e15b71cb57b}"
-name = "sun speaking"
-
-[sub_resource type="EventAsset" id="EventAsset_htika"]
-min_distance = 1.0
-max_distance = 20.0
-parameters = {
-"{4aef8ba1-eb29-467d-8fc1-33b81010fab3}": SubResource("ParameterAsset_qhchc"),
-"{9e7d0363-6ece-4382-b393-279ebac1f089}": SubResource("ParameterAsset_usihv"),
-"{abca0b70-abd1-4ead-8ac0-97f726ce9bdd}": SubResource("ParameterAsset_bn4ft"),
-"{d81b4b54-c73a-4cc3-b6f9-5e15b71cb57b}": SubResource("ParameterAsset_01kxp")
-}
-path = "event:/Speech"
-guid = "{a34eec7e-2661-4c0e-9019-b4fdb2e04562}"
-name = "Speech"
+name = "Person Speaking"
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -147,41 +89,24 @@ meta_underlined = false
 hint_underlined = false
 
 [node name="Speaking" type="StudioEventEmitter2D" parent="."]
-event = SubResource("EventAsset_htika")
-preload_samples = true
-"parameter_Nobody Speaking" = 1.0
+play_event = 2
+event = ExtResource("3_vbx6x")
 
-[node name="NobodySpeaking" type="StudioParameterTrigger" parent="."]
-studio_event_emitter = NodePath("../Speaking")
-event = SubResource("EventAsset_htika")
-"parameter_coocoo speaking" = 0.0
-"parameter_Nobody Speaking" = 1.0
-"parameter_pickme speaking" = 0.0
-"parameter_sun speaking" = 0.0
+[node name="NobodySpeaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_g8d5i")
+value = 0.0
 
-[node name="PickMeSpeaking" type="StudioParameterTrigger" parent="."]
-studio_event_emitter = NodePath("../Speaking")
-event = SubResource("EventAsset_htika")
-"parameter_coocoo speaking" = 0.0
-"parameter_Nobody Speaking" = 0.0
-"parameter_pickme speaking" = 1.0
-"parameter_sun speaking" = 0.0
+[node name="PickMeSpeaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_g8d5i")
+value = 1
 
-[node name="CooCooSpeaking" type="StudioParameterTrigger" parent="."]
-studio_event_emitter = NodePath("../Speaking")
-event = SubResource("EventAsset_htika")
-"parameter_coocoo speaking" = 1.0
-"parameter_Nobody Speaking" = 0.0
-"parameter_pickme speaking" = 0.0
-"parameter_sun speaking" = 0.0
+[node name="CooCooSpeaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_g8d5i")
+value = 3
 
-[node name="SunSpeaking" type="StudioParameterTrigger" parent="."]
-studio_event_emitter = NodePath("../Speaking")
-event = SubResource("EventAsset_htika")
-"parameter_coocoo speaking" = 0.0
-"parameter_Nobody Speaking" = 0.0
-"parameter_pickme speaking" = 0.0
-"parameter_sun speaking" = 1.0
+[node name="SunSpeaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_g8d5i")
+value = 4
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

@@ -42,7 +42,6 @@ var dialogue_line: DialogueLine:
 		dialogue_label.modulate.a = 0
 		dialogue_label.custom_minimum_size.x = dialogue_label.get_parent().size.x - 1
 		dialogue_label.dialogue_line = dialogue_line
-
 		# Show any responses we have
 		responses_menu.modulate.a = 0
 		if dialogue_line.responses.size() > 0:
@@ -65,17 +64,17 @@ var dialogue_line: DialogueLine:
 		
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()
-			$Speaking.play()
-			#if dialogue_line.character == "Pick me":
-			$PickMeSpeaking.trigger()
-			#elif dialogue_line.character == "Coo Coo":
-			#	$CooCooSpeaking.trigger()
-			#elif dialogue_line.character == "Sun":
-			#	$SunSpeaking.trigger()
+
+			print(dialogue_line.character)
+			if dialogue_line.character == "Pick me":
+				$PickMeSpeaking.trigger()
+			elif dialogue_line.character == "Coo Coo":
+				$CooCooSpeaking.trigger()
+			elif dialogue_line.character == "Sun":
+				$SunSpeaking.trigger()
 			await dialogue_label.finished_typing
-		$NobodySpeaking.trigger()
-		$Speaking.stop()
 		# Wait for input
+		$NobodySpeaking.trigger()
 		if dialogue_line.responses.size() > 0:
 			responses_menu.modulate.a = 1
 			configure_menu()

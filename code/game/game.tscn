@@ -1,34 +1,36 @@
-[gd_scene load_steps=14 format=3 uid="uid://drqy8abjokm4s"]
+[gd_scene load_steps=13 format=3 uid="uid://dnytrcq0a2wyb"]
 
 [ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
 [ext_resource type="Resource" uid="uid://dr76frs0beqo6" path="res://resources/minigame_data/intro.tres" id="2_dsky2"]
 [ext_resource type="PackedScene" uid="uid://b8les3u6x8r6a" path="res://code/game/minigame/travel/travel.tscn" id="2_y2rs1"]
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="3_610p1"]
 [ext_resource type="PackedScene" uid="uid://2efols75kede" path="res://code/game/minigame/cutscene/cutscene.tscn" id="3_wqbr4"]
 [ext_resource type="PackedScene" uid="uid://chifna77xw1ep" path="res://code/game/background.tscn" id="3_xuqvg"]
-[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="4_71lio"]
-[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="4_csirg"]
+[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="4_k35ml"]
 [ext_resource type="PackedScene" uid="uid://j6uyq1jiernl" path="res://code/game/minigame/fight/fight.tscn" id="5_4t51o"]
-[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="6_q3hn2"]
-[ext_resource type="Resource" uid="uid://ckdy2cnh7phpo" path="res://resources/minigame_data/outro.tres" id="7_r1luj"]
+[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="5_aq6k2"]
 
-[sub_resource type="Resource" id="Resource_5enri"]
-script = ExtResource("4_csirg")
+[sub_resource type="Resource" id="Resource_ycmqo"]
+script = ExtResource("3_610p1")
 minigame_type = 1
 
-[sub_resource type="Resource" id="Resource_baxq4"]
-script = ExtResource("4_csirg")
+[sub_resource type="Resource" id="Resource_fipid"]
+script = ExtResource("3_610p1")
 minigame_type = 0
-c_dialoge_res = ExtResource("4_71lio")
-c_enemy_res = ExtResource("6_q3hn2")
+c_dialoge_res = ExtResource("4_k35ml")
+c_enemy_res = ExtResource("5_aq6k2")
 
-[sub_resource type="Resource" id="Resource_m0ooo"]
-script = ExtResource("4_csirg")
+[sub_resource type="Resource" id="Resource_ndm43"]
+script = ExtResource("3_610p1")
 minigame_type = 2
-f_enemy_res = ExtResource("6_q3hn2")
+f_enemy_res = ExtResource("5_aq6k2")
 
-[node name="Game" type="Node"]
+[node name="Game" type="CanvasLayer"]
+offset = Vector2(0, -30)
+transform = Transform2D(1, 0, 0, 1, 0, -30)
+follow_viewport_enabled = true
 script = ExtResource("1_6tnbp")
-plot_minigames = Array[ExtResource("4_csirg")]([ExtResource("2_dsky2"), SubResource("Resource_5enri"), SubResource("Resource_baxq4"), SubResource("Resource_m0ooo"), ExtResource("7_r1luj")])
+plot_minigames = Array[ExtResource("3_610p1")]([ExtResource("2_dsky2"), SubResource("Resource_ycmqo"), SubResource("Resource_fipid"), SubResource("Resource_ndm43")])
 
 [node name="Background" parent="." instance=ExtResource("3_xuqvg")]
 visible = false
@@ -40,7 +42,6 @@ is_visible = false
 
 [node name="Travel" parent="." instance=ExtResource("2_y2rs1")]
 visible = false
-follow_viewport_enabled = true
 is_debug = false
 is_visible = false
 

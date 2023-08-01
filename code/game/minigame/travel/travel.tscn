@@ -4,17 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://b5xboqyyh4pu4" path="res://code/game/celestials/nonliving/space_object.tscn" id="2_fj1ny"]
 [ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player_travel.tscn" id="3_vivk2"]
 
-[node name="Travel" type="CanvasLayer"]
+[node name="Travel" type="Node2D"]
 script = ExtResource("1_c334i")
 space_object_tscn = ExtResource("2_fj1ny")
 
 [node name="NonlivingSpawn" type="Node2D" parent="."]
-position = Vector2(900, 180)
+position = Vector2(800, 180)
 
 [node name="SpawnTimer" type="Timer" parent="NonlivingSpawn"]
 
 [node name="Player" parent="." instance=ExtResource("3_vivk2")]
-position = Vector2(120, 150)
+position = Vector2(120, 180)
 
 [node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="Player"]
 scale = Vector2(9.3, 9.2)

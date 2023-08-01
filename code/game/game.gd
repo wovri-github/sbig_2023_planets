@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 @export var debug = true
 @export var plot_minigames: Array[MinigameData]
@@ -21,6 +21,7 @@ func _ready():
 func change_current_game(change_to: Minigame.TYPE, data: MinigameData = null):
 	if minigames[change_to] == current_minigame:
 		return
+	make_transition(change_to)
 	current_minigame._exit()
 	current_minigame = minigames[change_to]
 	current_minigame._enter(data)
@@ -35,7 +36,15 @@ func next_game_plot():
 		return
 	var minigame_data = plot_minigames[plot_tracker]
 	change_current_game(minigame_data.minigame_type, minigame_data)
-	
+
+func make_transition(change_to: Minigame.TYPE):
+	var tween = get_tree().create_tween()
+	if change_to == Minigame.TYPE.CUTSCENE or change_to == Minigame.TYPE.FIGHT:
+		tween.tween_property(self, "offset", Vector2(0, -30), 1.0)
+	else:
+		tween.tween_property(self, "offset", Vector2(0, 0), 1.0)
+	await tween.finished
+
 
 func _on_minigame_ended(is_success):
 	if is_success:

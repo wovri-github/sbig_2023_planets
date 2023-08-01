@@ -1,8 +1,9 @@
-extends CanvasLayer
+extends Node2D
 class_name Minigame
 
 signal minigame_ended(is_success)
 
+@export var is_debug = true
 @export var is_visible: bool = true:
 	set(new_value):
 		is_visible = new_value

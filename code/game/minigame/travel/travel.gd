@@ -4,9 +4,7 @@ extends Minigame
 
 @export var space_object_tscn: PackedScene
 @export var sec_before_stoping_spawn: float = 3
-@export var is_debug: bool = true
 var spawn_point_width = 200
-var default_position = Vector2(120, 150)
 @onready var player = $Player
 @onready var nonliving_spawn_point = $NonlivingSpawn
 @onready var spawn_timer = $NonlivingSpawn/SpawnTimer
@@ -47,9 +45,9 @@ func _on_spawn_timer_timeout():
 
 func _on_game_time_timeout():
 	var tween = get_tree().create_tween()
-	var distance = player.position.distance_to(default_position)
+	var distance = player.position.distance_to(Defaults.START_POSITION)
 	var time = distance / (player.acceleration_factor * 10)
-	tween.tween_property(player, "position", default_position, time)
+	tween.tween_property(player, "position", Defaults.START_POSITION, time)
 	await tween.finished
 	emit_signal("minigame_ended", true)
 

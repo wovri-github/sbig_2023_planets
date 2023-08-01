@@ -14,10 +14,7 @@ minigame_type = 0
 c_dialoge_res = ExtResource("2_i8qk4")
 c_enemy_res = ExtResource("3_oo8ls")
 
-[node name="Cutscene" type="CanvasLayer"]
-offset = Vector2(0, -30)
-transform = Transform2D(1, 0, 0, 1, 0, -30)
-follow_viewport_enabled = true
+[node name="Cutscene" type="Node2D"]
 script = ExtResource("1_haevn")
 minigame_debug_data = SubResource("Resource_d8gu6")
 
@@ -41,10 +38,15 @@ color = Color(0, 0, 0, 1)
 
 [node name="Enemy" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
-position = Vector2(552, 171)
+position = Vector2(520, 180)
 
 [node name="Player" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
 modulate = Color(0.156863, 0.788235, 0.870588, 1)
 position = Vector2(120, 180)
 planet_resource = ExtResource("4_3jycv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 30)
+anchor_mode = 0
+enabled = false

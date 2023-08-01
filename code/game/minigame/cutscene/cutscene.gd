@@ -1,7 +1,6 @@
 @tool
 extends Minigame
 
-@export var is_debug = true
 @export var minigame_debug_data: MinigameData
 var dialoge: DialogueResource
 var own_balloon_tscn = preload("res://code/own_dialogue_box/balloon.tscn")
@@ -15,6 +14,7 @@ func _ready():
 		return
 	if is_debug:
 		enter(minigame_debug_data)
+		$Camera2D.enabled = true
 	else:
 		self.process_mode = Node.PROCESS_MODE_DISABLED
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)

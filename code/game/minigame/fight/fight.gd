@@ -8,12 +8,16 @@ var current_turn: Fighter
 	TURN.ENEMY: $Enemy,
 }
 
-#func _ready():
-#	if Engine.is_editor_hint():
-#		return
-#	var data = MinigameData.new()
-#	data.f_enemy_res = load("res://resources/planet/planet1.tres")
-#	enter(data)
+func _ready():
+	if Engine.is_editor_hint():
+		return
+	if is_debug:
+		var data = MinigameData.new()
+		data.f_enemy_res = load("res://resources/planet/planet1.tres")
+		enter(data)
+		$Camera2D.enabled = true
+	else:
+		self.process_mode = Node.PROCESS_MODE_DISABLED
 
 
 

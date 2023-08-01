@@ -7,11 +7,9 @@
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="5_vm6v0"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_manager.gd" id="6_i3g3t"]
 
-[node name="Fight" type="CanvasLayer"]
-offset = Vector2(0, -30)
-transform = Transform2D(1, 0, 0, 1, 0, -30)
-follow_viewport_enabled = true
+[node name="Fight" type="Node2D"]
 script = ExtResource("1_830ul")
+is_debug = null
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -103,12 +101,17 @@ modulate = Color(0.156863, 0.788235, 0.870588, 1)
 planet_resource = ExtResource("5_vm6v0")
 
 [node name="Enemy" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
-position = Vector2(480, 180)
+position = Vector2(520, 180)
 script = ExtResource("5_jwdx6")
 fight_manager = NodePath("../UI/FightManager")
 enemy = NodePath("../Player")
 
 [node name="Planet" parent="Enemy" instance=ExtResource("4_a64nh")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 30)
+anchor_mode = 0
+enabled = false
 
 [connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Attack" to="Player" method="_on_attack_pressed"]
 [connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Defend" to="Player" method="_on_defend_pressed"]

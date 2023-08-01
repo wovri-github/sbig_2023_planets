@@ -14,6 +14,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="CooCoo" ID="{B07D1A9B-9DBC-4603-BE97-12FFE9D41BC1}" ShortID="1038971543">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
@@ -48,6 +52,7 @@
 										<RandomSequenceContainer Name="sound_coocoo_speak" ID="{D6AF6001-5028-4ACB-BCCC-DB0B2E40B531}" ShortID="825165555">
 											<PropertyList>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
@@ -69,6 +74,21 @@
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom CreatedFrom="{830124FB-B9D5-4AE8-846E-E94A74652666}">
+														<Effect Name="Low_Pass_20KHz (Custom)" ID="{18986A45-8896-453E-BAE4-8FB7FD29DB63}" ShortID="923353351" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+															<PropertyList>
+																<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+																<Property Name="FrequencyBand2" Type="Real32" Value="3656"/>
+																<Property Name="FrequencyBand3" Type="Real32" Value="10789"/>
+																<Property Name="GainBand2" Type="Real32" Value="-2"/>
+																<Property Name="OnOffBand1" Type="bool" Value="False"/>
+																<Property Name="OnOffBand2" Type="bool" Value="False"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>
@@ -322,9 +342,24 @@
 											<ObjectLists/>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="sound_coocoo_hurt" ID="{C85932D2-13D3-4DB9-8A08-0FF32DD34AED}" ShortID="48629913">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Wwise Matrix Reverb (Custom)" ID="{FA179750-EFBF-4337-B39F-E61AF0DE684B}" ShortID="734094853" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+																<Property Name="HFRatio" Type="Real32" Value="2.7"/>
+																<Property Name="ReverbTime" Type="Real32" Value="5.6"/>
+																<Property Name="WetLevel" Type="Real32" Value="-23"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>
@@ -381,9 +416,24 @@
 											<ObjectLists/>
 										</RandomSequenceContainer>
 										<Sound Name="sound_coocoo_attack" ID="{B35E0783-82DD-40BF-B231-B9B8C2F2536A}" ShortID="654766758">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Wwise Matrix Reverb (Custom)" ID="{080E90BC-6FD1-4261-B713-BD0BFFA815BC}" ShortID="53909388" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+																<Property Name="HFRatio" Type="Real32" Value="2.7"/>
+																<Property Name="ReverbTime" Type="Real32" Value="5.6"/>
+																<Property Name="WetLevel" Type="Real32" Value="-23"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>
@@ -410,6 +460,10 @@
 							<ObjectLists/>
 						</ActorMixer>
 						<ActorMixer Name="PickMe" ID="{E48FA06E-6580-46E7-95F9-EED1139CF962}" ShortID="83437638">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
@@ -681,9 +735,24 @@
 											</ActiveSourceList>
 										</Sound>
 										<RandomSequenceContainer Name="sound_pickme_hurt" ID="{C65ADF2E-45B3-44FD-9BCA-74222D9EB65B}" ShortID="343473515">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Wwise Matrix Reverb (Custom)" ID="{462823EF-A948-4A58-B861-5AEE58481E87}" ShortID="257271146" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+																<Property Name="HFRatio" Type="Real32" Value="6.6"/>
+																<Property Name="ReverbTime" Type="Real32" Value="2.4"/>
+																<Property Name="WetLevel" Type="Real32" Value="-18"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>
@@ -740,9 +809,24 @@
 											<ObjectLists/>
 										</RandomSequenceContainer>
 										<Sound Name="sound_pickme_attack" ID="{FF5BF001-A10F-41F2-B771-34C7B42E8497}" ShortID="207724553">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Wwise Matrix Reverb (Custom)" ID="{A4A8B218-3D84-4A81-A577-17A8173B8E79}" ShortID="845316868" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+																<Property Name="HFRatio" Type="Real32" Value="6.6"/>
+																<Property Name="ReverbTime" Type="Real32" Value="2.4"/>
+																<Property Name="WetLevel" Type="Real32" Value="-18"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>
@@ -800,6 +884,7 @@
 												<Value>2</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -809,6 +894,32 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8026DC9D-512F-46F8-BAE6-72C5E3BBED8B}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Matrix Reverb (Custom)" ID="{F9A87A29-CA9D-4540-9EF3-CF049A344E3A}" ShortID="775519827" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-1.3"/>
+														<Property Name="HFRatio" Type="Real32" Value="8.5"/>
+														<Property Name="ReverbTime" Type="Real32" Value="7.2"/>
+														<Property Name="WetLevel" Type="Real32" Value="-17"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Wwise Parametric EQ (Custom)" ID="{E1DAB9E4-2268-4B8C-AAB6-5DCE71248153}" ShortID="1038702771" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+													<PropertyList>
+														<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+														<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+														<Property Name="FrequencyBand1" Type="Real32" Value="62"/>
+														<Property Name="FrequencyBand2" Type="Real32" Value="4947"/>
+														<Property Name="FrequencyBand3" Type="Real32" Value="6096"/>
+														<Property Name="GainBand2" Type="Real32" Value="-2.5"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7439EFB5-A517-46A1-82BC-6075A754C7EB}"/>

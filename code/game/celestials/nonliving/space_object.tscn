@@ -8,9 +8,8 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0nao6"]
-radius = 53.0094
 
-[node name="SpaceObject" type="RigidBody2D"]
+[node name="SpaceObject" type="RigidBody2D" groups=["nonlivings"]]
 collision_layer = 2
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_71bg3")
@@ -20,25 +19,25 @@ contact_monitor = true
 linear_damp_mode = 1
 script = ExtResource("1_hk2n4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_0nao6")
-
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot"]
 modulate = Color(0.4, 0.266667, 0.117647, 1)
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("1_1gkf8")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Pivot"]
 position = Vector2(2.38419e-06, 0)
-scale = Vector2(7, 7)
+scale = Vector2(2, 2)
 
 [node name="NotVisibleLifeTime" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0nao6")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_entered" from="Pivot/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="Pivot/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="timeout" from="NotVisibleLifeTime" to="." method="_on_life_time_timeout"]

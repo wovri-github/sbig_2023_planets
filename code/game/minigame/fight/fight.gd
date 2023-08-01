@@ -1,3 +1,4 @@
+@tool
 extends Minigame
 
 enum TURN{PLAYER, ENEMY}
@@ -7,10 +8,16 @@ var current_turn: Fighter
 	TURN.ENEMY: $Enemy,
 }
 
-#func _ready():
-#	var data = MinigameData.new()
-#	data.f_enemy_res = load("res://resources/planet/planet1.tres")
-#	enter(data)
+func _ready():
+	if Engine.is_editor_hint():
+		return
+	if is_debug:
+		var data = MinigameData.new()
+		data.f_enemy_res = load("res://resources/planet/planet1.tres")
+		enter(data)
+		$Camera2D.enabled = true
+	else:
+		self.process_mode = Node.PROCESS_MODE_DISABLED
 
 
 
@@ -39,8 +46,8 @@ func _on_enemy_turn_ended():
 
 func _on_player_defeated():
 	current_turn._end_turn()
-	print("Playyer defeated!")
+	emit_signal("minigame_ended", false)
 
 func _on_enemy_defeated():
 	current_turn._end_turn()
-	emit_signal("minigame_ended")
+	emit_signal("minigame_ended", true)

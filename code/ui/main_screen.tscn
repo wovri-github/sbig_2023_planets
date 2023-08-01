@@ -10,7 +10,6 @@ script = ExtResource("1_kg0rm")
 
 [node name="MainMenu" parent="." instance=ExtResource("1_kw6wf")]
 offset_top = -116.0
-offset_bottom = 116.0
 
 [node name="Settings" parent="." instance=ExtResource("2_jbkk5")]
 visible = false
@@ -18,6 +17,7 @@ visible = false
 [node name="Credits" parent="." instance=ExtResource("3_cor1s")]
 visible = false
 
+[connection signal="continue_clicked" from="MainMenu" to="." method="_on_main_menu_continue_clicked"]
+[connection signal="new_game_clicked" from="MainMenu" to="." method="_on_main_menu_new_game_clicked"]
 [connection signal="open_credits" from="MainMenu" to="." method="_on_main_menu_open_credits"]
 [connection signal="open_settings" from="MainMenu" to="." method="_on_main_menu_open_settings"]
-[connection signal="play_game" from="MainMenu" to="." method="_on_main_menu_play_game"]

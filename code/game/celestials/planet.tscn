@@ -15,7 +15,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Planet" type="Node2D" groups=["Planet"]]
+[node name="Planet" type="Node2D" groups=["Planets"]]
+modulate = Color(0.65098, 0.6, 0.862745, 1)
 script = ExtResource("1_3po7y")
 planet_resource = ExtResource("2_w8tpc")
 

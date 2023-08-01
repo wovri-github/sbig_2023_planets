@@ -18,6 +18,6 @@ animations = [{
 script = ExtResource("1_vpdcg")
 sprite_frames = SubResource("SpriteFrames_iin48")
 dialogue_name = "Planet"
-color = Color(1, 1, 1, 1)
+color = Color(0.65098, 0.6, 0.862745, 1)
 health = 10
 damage = 10

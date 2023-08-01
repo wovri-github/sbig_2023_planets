@@ -7,7 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_0irtn"]
 radius = 75.2396
 
-[node name="AsteroidPlayer" type="CharacterBody2D"]
+[node name="PlayerTravel" type="CharacterBody2D"]
+position = Vector2(10, 200)
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_n57nn")

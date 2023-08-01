@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://lqbvrmw7u6ab"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/Sun/Dialogue/sound_sun_oh"
+guid = "{a63f6a18-1a66-48c1-b81a-5ae3a9dc5089}"
+name = "sound_sun_oh"

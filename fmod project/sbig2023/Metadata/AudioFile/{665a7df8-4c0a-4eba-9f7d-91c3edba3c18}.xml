@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{665a7df8-4c0a-4eba-9f7d-91c3edba3c18}">
+		<property name="assetPath">
+			<value>sound_coocoo_speak_4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.39764583333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9579fcdc-5af2-419b-88db-8a78740811e7}</destination>
+		</relationship>
+	</object>
+</objects>

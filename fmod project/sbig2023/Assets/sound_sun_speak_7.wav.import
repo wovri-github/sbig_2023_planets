@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bul3g7b2j34v8"
+path="res://.godot/imported/sound_sun_speak_7.wav-2652d30be237bc89359cb7814e19b28b.sample"
+
+[deps]
+
+source_file="res://fmod project/sbig2023/Assets/sound_sun_speak_7.wav"
+dest_files=["res://.godot/imported/sound_sun_speak_7.wav-2652d30be237bc89359cb7814e19b28b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

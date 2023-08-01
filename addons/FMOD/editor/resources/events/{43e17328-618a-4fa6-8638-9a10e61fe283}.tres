@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cdq150drppq1l"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/PickMe/Dialogue/sound_pickme_speak"
+guid = "{43e17328-618a-4fa6-8638-9a10e61fe283}"
+name = "sound_pickme_speak"

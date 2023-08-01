@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1798de47-50e3-44e8-997f-68a1f8dc08b9}">
+		<property name="name">
+			<value>coocoo speaking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{abca0b70-abd1-4ead-8ac0-97f726ce9bdd}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{abca0b70-abd1-4ead-8ac0-97f726ce9bdd}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

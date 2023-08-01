@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{6a1f4f3c-3033-4fc9-8009-c74924956b16}">
+		<property name="name">
+			<value>pickme speaking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4aef8ba1-eb29-467d-8fc1-33b81010fab3}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4aef8ba1-eb29-467d-8fc1-33b81010fab3}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

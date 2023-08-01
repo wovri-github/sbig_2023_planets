@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpyn46qmja8j8"
+path="res://.godot/imported/sound_pickme_speak_4.wav-bddf9673cbaf00f99aac2a6778bf2c88.sample"
+
+[deps]
+
+source_file="res://fmod project/sbig2023/Assets/sound_pickme_speak_4.wav"
+dest_files=["res://.godot/imported/sound_pickme_speak_4.wav-bddf9673cbaf00f99aac2a6778bf2c88.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

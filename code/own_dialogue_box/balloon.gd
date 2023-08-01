@@ -62,10 +62,19 @@ var dialogue_line: DialogueLine:
 		will_hide_balloon = false
 
 		dialogue_label.modulate.a = 1
+		
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()
+			$Speaking.play()
+			#if dialogue_line.character == "Pick me":
+			$PickMeSpeaking.trigger()
+			#elif dialogue_line.character == "Coo Coo":
+			#	$CooCooSpeaking.trigger()
+			#elif dialogue_line.character == "Sun":
+			#	$SunSpeaking.trigger()
 			await dialogue_label.finished_typing
-
+		$NobodySpeaking.trigger()
+		$Speaking.stop()
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
 			responses_menu.modulate.a = 1

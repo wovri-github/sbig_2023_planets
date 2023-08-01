@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c6bsp24vfpgnd"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/CooCoo/Dialogue/sound_coocoo_hurt"
+guid = "{b091d04d-70d8-46ea-9a07-d54ef9ce0525}"
+name = "sound_coocoo_hurt"

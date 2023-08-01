@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4f4c2770-d266-4a6f-ab65-e24571224f9b}">
+		<property name="name">
+			<value>sun speaking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d81b4b54-c73a-4cc3-b6f9-5e15b71cb57b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d81b4b54-c73a-4cc3-b6f9-5e15b71cb57b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

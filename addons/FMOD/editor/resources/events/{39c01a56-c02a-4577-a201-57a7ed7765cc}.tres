@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://vqiswdu6rso7"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/PickMe/Dialogue/sound_pickme_oh"
+guid = "{39c01a56-c02a-4577-a201-57a7ed7765cc}"
+name = "sound_pickme_oh"

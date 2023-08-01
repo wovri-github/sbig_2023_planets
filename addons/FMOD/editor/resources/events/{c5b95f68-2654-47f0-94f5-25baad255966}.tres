@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://obmbwwh7err3"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/Sun/Dialogue/sound_sun_speak"
+guid = "{c5b95f68-2654-47f0-94f5-25baad255966}"
+name = "sound_sun_speak"

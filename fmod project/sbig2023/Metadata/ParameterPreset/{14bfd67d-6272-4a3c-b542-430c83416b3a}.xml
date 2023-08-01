@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{14bfd67d-6272-4a3c-b542-430c83416b3a}">
+		<property name="name">
+			<value>Nobody Speaking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9e7d0363-6ece-4382-b393-279ebac1f089}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9e7d0363-6ece-4382-b393-279ebac1f089}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

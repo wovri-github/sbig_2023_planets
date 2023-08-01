@@ -82,6 +82,8 @@ var dialogue_line: DialogueLine:
 			print(dialogue_line.character)
 			if dialogue_line.character == "Pick me":
 				$PickMeSpeaking.trigger()
+			elif dialogue_line.character == "Planet1":
+				$Planet1Speaking.trigger()
 			elif dialogue_line.character == "Coo Coo":
 				$CooCooSpeaking.trigger()
 			elif dialogue_line.character == "Sun":

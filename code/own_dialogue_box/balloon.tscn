@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://code/own_dialogue_box/balloon.gd" id="1_aj661"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_h87yd"]
@@ -31,6 +31,24 @@ guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
 
 [sub_resource type="ParameterAsset" id="ParameterAsset_g8d5i"]
 parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag")
+labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
+path = "parameter:/Person Speaking"
+guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
+name = "Person Speaking"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_5d6hm"]
+data1 = 1038224652
+data2 = 2775775043
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_0liyt"]
+name = "Person Speaking"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_5d6hm")
+maximum = 4.0
+flags = 28
+guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_q1lqq"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_0liyt")
 labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
 path = "parameter:/Person Speaking"
 guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
@@ -90,7 +108,8 @@ meta_underlined = false
 hint_underlined = false
 
 [node name="Speaking" type="StudioEventEmitter2D" parent="."]
-play_event = 2
+play_event = 1
+stop_event = 3
 event = ExtResource("3_vbx6x")
 
 [node name="NobodySpeaking" type="StudioGlobalParameterTrigger" parent="."]
@@ -108,6 +127,10 @@ value = 3
 [node name="SunSpeaking" type="StudioGlobalParameterTrigger" parent="."]
 parameter = SubResource("ParameterAsset_g8d5i")
 value = 4
+
+[node name="Planet1Speaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_q1lqq")
+value = 2
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

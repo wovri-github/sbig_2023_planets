@@ -24,9 +24,9 @@ func enter(data = {}):
 	$GameTime.start()
 	spawn_timer.start()
 	player.position = Defaults.START_POSITION
+	player.velocity = Vector2.ZERO
 
-func kill_player():
-	emit_signal("minigame_ended", false)
+
 
 func spawn_space_object():
 	var space_object_inst = space_object_tscn.instantiate()
@@ -42,17 +42,21 @@ func _on_spawn_timer_timeout():
 		return
 	spawn_space_object()
 
-
-func _on_game_time_timeout():
+func end_game():
+	get_tree().call_group("nonlivings", "queue_free")
 	var tween = get_tree().create_tween()
 	var distance = player.position.distance_to(Defaults.START_POSITION)
 	var time = distance / (player.acceleration_factor * 10)
 	tween.tween_property(player, "position", Defaults.START_POSITION, time)
 	await tween.finished
+
+func _on_game_time_timeout():
+	await end_game()
 	emit_signal("minigame_ended", true)
 
 
 func _on_visible_on_screen_notifier_2d_2_screen_exited():
 	if $GameTime.is_stopped():
 		return
-	kill_player()
+	get_tree().call_group("nonlivings", "queue_free")
+	emit_signal("minigame_ended", false)

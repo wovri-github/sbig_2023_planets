@@ -21,9 +21,9 @@ func _enter(data):
 	enter(data)
 
 func _exit():
+	exit()
 	is_visible = false
 	self.set_process_mode(PROCESS_MODE_DISABLED)
-	exit()
 
 
 func enter(_data):

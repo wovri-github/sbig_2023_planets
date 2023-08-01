@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpsmmld5orxv"]
+
+[ext_resource type="Theme" uid="uid://clefja284aktg" path="res://code/ui/menu/default_theme.tres" id="1_glqfj"]
+[ext_resource type="Script" path="res://code/ui/menu/pause_menu.gd" id="2_xdudt"]
+
+[node name="PauseMenu" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -104.0
+offset_right = 100.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_glqfj")
+script = ExtResource("2_xdudt")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Resume"
+
+[node name="Settings" type="Button" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Exit"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Margin/VBox/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Margin/VBox/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Margin/VBox/Exit" to="." method="_on_exit_pressed"]

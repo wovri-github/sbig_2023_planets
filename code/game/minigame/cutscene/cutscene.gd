@@ -28,7 +28,9 @@ func enter(data: MinigameData):
 	else:
 		enemy.show()
 		enemy.planet_resource = data.c_enemy_res
+	await $UI.show_borders()
 	DialogueManager.show_dialogue_balloon(dialoge)
 
 func _on_dialogue_ended(_resource):
+	await $UI.hide_borders()
 	emit_signal("minigame_ended", true)

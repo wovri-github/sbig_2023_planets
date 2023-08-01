@@ -47,7 +47,7 @@ func _on_spawn_timer_timeout():
 func _on_game_time_timeout():
 	var tween = get_tree().create_tween()
 	var distance = player.position.distance_to(default_position)
-	var time = distance / player.speed
+	var time = distance / (player.acceleration_factor * 10)
 	tween.tween_property(player, "position", default_position, time)
 	await tween.finished
 	emit_signal("minigame_ended", true)

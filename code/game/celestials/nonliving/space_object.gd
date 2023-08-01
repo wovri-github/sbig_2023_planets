@@ -1,7 +1,8 @@
 extends RigidBody2D
 
 var x_max = 20
-var speed = 100
+var speed_min = 50
+var speed_max = 200
 @export var force_factor = 100
 @export var scale_min = 0.5
 @export var scale_max = 3
@@ -29,9 +30,10 @@ func change_size():
 func set_up_initial_movement():
 	var rand_x = randi_range(0, x_max)
 	var rand_y = randi_range(0, y_max)
+	var rand_speed = randi_range(speed_min, speed_max)
 	var destination_point = Vector2(rand_x, rand_y)
 	var radians_to_destination = self.position.angle_to_point(destination_point)
-	self.set_linear_velocity(Vector2(speed, 0).rotated(radians_to_destination))
+	self.set_linear_velocity(Vector2(rand_speed, 0).rotated(radians_to_destination))
 
 
 

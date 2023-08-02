@@ -1,22 +1,258 @@
-[gd_scene load_steps=9 format=3 uid="uid://2efols75kede"]
+[gd_scene load_steps=14 format=3 uid="uid://2efols75kede"]
 
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/cutscene.gd" id="1_haevn"]
-[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="2_i8qk4"]
-[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="3_oo8ls"]
+[ext_resource type="Resource" uid="uid://dqiv3y5xx5ddl" path="res://resources/minigame_data/sun_cutscene.tres" id="2_730o3"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="3_rntc7"]
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/UI.gd" id="3_vt2jm"]
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="4_3jycv"]
-[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="4_kpwdq"]
+[ext_resource type="Texture2D" uid="uid://bd3msu05krb5s" path="res://assets/ui__asteroids__buttons__sunglasses.png" id="6_775dd"]
+[ext_resource type="Texture2D" uid="uid://duqv647q86wis" path="res://assets/calendar.png" id="7_s7d21"]
 
-[sub_resource type="Resource" id="Resource_d8gu6"]
-script = ExtResource("4_kpwdq")
-minigame_type = 0
-c_dialoge_res = ExtResource("2_i8qk4")
-c_enemy_res = ExtResource("3_oo8ls")
+[sub_resource type="Animation" id="Animation_ojtuk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(120, 180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/ColorRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(141, 162)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/TextureRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/TextureRect:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(135, -27)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Calendar:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Calendar/Sprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/Calendar/Sprite2D:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.01, 0.01)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/Calendar/Sprite2D:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jxvtg"]
+resource_name = "intro"
+length = 8.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-50, 180), Vector2(-50, 180), Vector2(120, 180)]
+}
+
+[sub_resource type="Animation" id="Animation_7h0wi"]
+resource_name = "throw_bandaid"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(141, 162), Vector2(478, 162)]
+}
+
+[sub_resource type="Animation" id="Animation_pdmso"]
+resource_name = "throw_sunglasses"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TextureRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(135, -27), Vector2(447, -23)]
+}
+
+[sub_resource type="Animation" id="Animation_wo7wa"]
+resource_name = "show_calendar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Calendar:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Calendar/Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Calendar/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.01, 0.01), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/Calendar/Sprite2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(0.5, 6.9644),
+"update": 0,
+"values": [0.0, 18.8496]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ggyqy"]
+_data = {
+"RESET": SubResource("Animation_ojtuk"),
+"intro": SubResource("Animation_jxvtg"),
+"show_calendar": SubResource("Animation_wo7wa"),
+"throw_bandaid": SubResource("Animation_7h0wi"),
+"throw_sunglasses": SubResource("Animation_pdmso")
+}
 
 [node name="Cutscene" type="Node2D"]
 script = ExtResource("1_haevn")
-minigame_debug_data = SubResource("Resource_d8gu6")
+minigame_debug_data = ExtResource("2_730o3")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_vt2jm")
@@ -42,11 +278,42 @@ position = Vector2(520, 180)
 
 [node name="Player" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
-modulate = Color(0.156863, 0.788235, 0.870588, 1)
 position = Vector2(120, 180)
 planet_resource = ExtResource("4_3jycv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 30)
 anchor_mode = 0
 enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ggyqy")
+}
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+visible = false
+offset_left = 141.0
+offset_top = 162.0
+offset_right = 151.0
+offset_bottom = 186.0
+rotation = -0.313824
+
+[node name="TextureRect" type="TextureRect" parent="AnimationPlayer"]
+visible = false
+offset_left = 135.0
+offset_top = -27.0
+offset_right = 196.0
+offset_bottom = 263.0
+texture = ExtResource("6_775dd")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Calendar" type="CanvasLayer" parent="AnimationPlayer"]
+layer = 120
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer/Calendar"]
+visible = false
+position = Vector2(320, 180)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("7_s7d21")

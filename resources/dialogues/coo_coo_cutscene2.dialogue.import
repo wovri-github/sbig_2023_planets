@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://crvhkelmx2kgu"
+path="res://.godot/imported/coo_coo_cutscene2.dialogue-3a37fc8c8efd932259a837b1b80031e1.tres"
+
+[deps]
+
+source_file="res://resources/dialogues/coo_coo_cutscene2.dialogue"
+dest_files=["res://.godot/imported/coo_coo_cutscene2.dialogue-3a37fc8c8efd932259a837b1b80031e1.tres"]
+
+[params]
+
+defaults=true

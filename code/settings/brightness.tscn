@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqa125kr4om0v"]
+
+[ext_resource type="Script" path="res://code/settings/brightness.gd" id="1_i5kk4"]
+
+[node name="Brightness" type="CanvasModulate"]
+script = ExtResource("1_i5kk4")

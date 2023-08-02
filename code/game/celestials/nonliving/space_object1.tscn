@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5xboqyyh4pu4"]
 
-[ext_resource type="Texture2D" uid="uid://dxmmy4i1ahh7q" path="res://assets/white_circle.png" id="1_1gkf8"]
-[ext_resource type="Script" path="res://code/game/celestials/nonliving/space_object.gd" id="1_hk2n4"]
+[ext_resource type="Script" path="res://code/game/celestials/nonliving/space_object.gd" id="1_nnpwh"]
+[ext_resource type="Texture2D" uid="uid://djesufj2jentt" path="res://assets/asteroid1.png" id="2_o767p"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_71bg3"]
 friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0nao6"]
+radius = 26.0
 
 [node name="SpaceObject" type="RigidBody2D" groups=["nonlivings"]]
 collision_layer = 2
@@ -17,24 +18,23 @@ gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
 linear_damp_mode = 1
-script = ExtResource("1_hk2n4")
+script = ExtResource("1_nnpwh")
 
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot"]
-modulate = Color(0.4, 0.266667, 0.117647, 1)
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("1_1gkf8")
+texture = ExtResource("2_o767p")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Pivot"]
-position = Vector2(2.38419e-06, 0)
-scale = Vector2(2, 2)
+position = Vector2(2.38419e-06, -1.5)
+scale = Vector2(2.8, 2.75)
 
 [node name="NotVisibleLifeTime" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_0nao6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MinigameData" load_steps=4 format=3 uid="uid://c7cql0jik7wb6"]
+
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="1_1nvg1"]
+[ext_resource type="Resource" uid="uid://bcc8n8lqfnyl2" path="res://resources/dialogues/planet1_cutscene1.dialogue" id="1_nwiqk"]
+[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="2_ghyiu"]
+
+[resource]
+script = ExtResource("1_1nvg1")
+minigame_type = 0
+c_is_mad = true
+c_animation_name = ""
+c_dialoge_res = ExtResource("1_nwiqk")
+c_enemy_res = ExtResource("2_ghyiu")
+t_minigame_time = 10
+t_sec_every_nonliving_spawn = 1.0
+t_additional_nonliving_speed = 0

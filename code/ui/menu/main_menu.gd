@@ -7,6 +7,8 @@ signal open_credits()
 
 
 func _ready():
+	if OS.has_feature("web"):
+		$Margin/VBox/Exit.disabled = true
 	if Storage.do_save_exist:
 		$Margin/VBox/Continue.disabled = false
 	else:

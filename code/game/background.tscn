@@ -1,11 +1,20 @@
-[gd_scene format=3 uid="uid://chifna77xw1ep"]
+[gd_scene load_steps=3 format=3 uid="uid://chifna77xw1ep"]
+
+[ext_resource type="Script" path="res://code/game/background.gd" id="1_foyt7"]
+[ext_resource type="Texture2D" uid="uid://d3rxwt6ux2vt1" path="res://assets/SKY-Sheet.png" id="1_ktf2y"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_foyt7")
 
-[node name="SpaceColor" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.164706, 0.164706, 0.164706, 1)
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_offset = Vector2(0, 60)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("1_ktf2y")
+centered = false
+offset = Vector2(0, -32)
+vframes = 2
+region_enabled = true
+region_rect = Rect2(32, 0, 1920, 784)

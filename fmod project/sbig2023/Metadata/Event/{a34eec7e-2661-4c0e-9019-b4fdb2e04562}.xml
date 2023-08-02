@@ -242,10 +242,10 @@
 	</object>
 	<object class="LoopRegion" id="{cddfd7a1-cb5a-452c-b2b8-99060d5f015f}">
 		<property name="position">
-			<value>0.035000000000000003</value>
+			<value>0.029999999999999999</value>
 		</property>
 		<property name="length">
-			<value>0.035000000000000003</value>
+			<value>0.040000000000000008</value>
 		</property>
 		<property name="looping">
 			<value>2</value>
@@ -262,10 +262,10 @@
 	</object>
 	<object class="LoopRegion" id="{1b9a9a7e-eb89-4a31-bc81-e8fe8adfd910}">
 		<property name="position">
-			<value>0.23999999999999999</value>
+			<value>0.23500000000000001</value>
 		</property>
 		<property name="length">
-			<value>0.074999999999999997</value>
+			<value>0.079999999999999974</value>
 		</property>
 		<property name="looping">
 			<value>2</value>
@@ -282,10 +282,10 @@
 	</object>
 	<object class="LoopRegion" id="{c09f271e-37de-4fab-9239-4f1657d10340}">
 		<property name="position">
-			<value>0.375</value>
+			<value>0.37</value>
 		</property>
 		<property name="length">
-			<value>0.065000000000000002</value>
+			<value>0.070000000000000007</value>
 		</property>
 		<property name="looping">
 			<value>2</value>

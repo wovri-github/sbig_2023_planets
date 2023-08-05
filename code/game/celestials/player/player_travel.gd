@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var exponential_dumping = 0.05
 @export var acceleration_factor = 10
 
+#func _ready():
+#	$Planet.floating_tween.stop()
 
 func _physics_process(_delta):
 	velocity_dumping()

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlanetResource" load_steps=3 format=3 uid="uid://nnxlrpxb2hgj"]
+
+[ext_resource type="Script" path="res://code/game/celestials/planet_resource.gd" id="1_xfu06"]
+[ext_resource type="SpriteFrames" uid="uid://bh5yqq5qyx4fr" path="res://assets/coo-coo.tres" id="2_pepod"]
+
+[resource]
+script = ExtResource("1_xfu06")
+sprite_frames = ExtResource("2_pepod")
+dialogue_name = "Coo-coo-not-loco"
+color = Color(1, 1, 1, 1)
+health = 200
+damage = 30

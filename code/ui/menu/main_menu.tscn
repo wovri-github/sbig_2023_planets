@@ -9,10 +9,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -155.0
-offset_right = 100.0
-offset_bottom = 116.0
+offset_left = -123.5
+offset_top = -162.0
+offset_right = 123.5
+offset_bottom = 162.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1v6wo")
@@ -25,27 +25,27 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Continue" type="Button" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Continue"
 
 [node name="NewGame" type="Button" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "New game"
 
 [node name="Settings" type="Button" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Settings"
 
 [node name="Credits" type="Button" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Credits"
 
 [node name="Exit" type="Button" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Exit"
 

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MinigameData" load_steps=4 format=3 uid="uid://ccen0get411cd"]
+
+[ext_resource type="Resource" uid="uid://crvhkelmx2kgu" path="res://resources/dialogues/coo_coo_cutscene2.dialogue" id="1_7nonl"]
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="1_osp44"]
+[ext_resource type="Resource" uid="uid://nnxlrpxb2hgj" path="res://resources/planet/coo-coo.tres" id="2_toy7n"]
+
+[resource]
+script = ExtResource("1_osp44")
+minigame_type = 0
+c_is_mad = false
+c_animation_name = ""
+c_dialoge_res = ExtResource("1_7nonl")
+c_enemy_res = ExtResource("2_toy7n")
+t_minigame_time = 10
+t_sec_every_nonliving_spawn = 1.0
+t_additional_nonliving_speed = 0

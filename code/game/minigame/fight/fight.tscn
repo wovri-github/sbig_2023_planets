@@ -1,15 +1,100 @@
-[gd_scene load_steps=7 format=3 uid="uid://j6uyq1jiernl"]
+[gd_scene load_steps=11 format=3 uid="uid://j6uyq1jiernl"]
 
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight.gd" id="1_830ul"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_player.gd" id="2_mma2m"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="4_a64nh"]
+[ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="5_gayi7"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_enemy.gd" id="5_jwdx6"]
-[ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="5_vm6v0"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_manager.gd" id="6_i3g3t"]
+
+[sub_resource type="Animation" id="Animation_tbedw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Planet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgtua"]
+resource_name = "enemy_attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy/Planet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 5, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-181, 38), Vector2(-363, 0), Vector2(-185, -40), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack"
+}, {
+"args": [],
+"method": &"turn_complete"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3wsnf"]
+resource_name = "player_attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Planet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 0.267943, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(181, 38), Vector2(363, 0), Vector2(185, -40), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack"
+}, {
+"args": [],
+"method": &"turn_complete"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsn6g"]
+_data = {
+"RESET": SubResource("Animation_tbedw"),
+"enemy_attack": SubResource("Animation_dgtua"),
+"player_attack": SubResource("Animation_3wsnf")
+}
 
 [node name="Fight" type="Node2D"]
 script = ExtResource("1_830ul")
-is_debug = null
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -50,7 +135,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="UI/FightManager/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
 [node name="Buttons" type="VBoxContainer" parent="UI/FightManager/MarginContainer/HBoxContainer"]
@@ -60,15 +145,16 @@ layout_mode = 2
 [node name="Attack" type="Button" parent="UI/FightManager/MarginContainer/HBoxContainer/Buttons"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-text = "Attack"
+text = "Attack: 13"
 
-[node name="Defend" type="Button" parent="UI/FightManager/MarginContainer/HBoxContainer/Buttons"]
+[node name="FlairUp" type="Button" parent="UI/FightManager/MarginContainer/HBoxContainer/Buttons"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-text = "Defend"
+tooltip_text = "Multiplies your attack by 2"
+text = "Flair Up 0/3"
 
 [node name="MarginContainer2" type="MarginContainer" parent="UI/FightManager/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
 [node name="EnemyHP" type="ProgressBar" parent="UI/FightManager/MarginContainer/HBoxContainer"]
@@ -97,8 +183,7 @@ fight_manager = NodePath("../UI/FightManager")
 enemy = NodePath("../Enemy")
 
 [node name="Planet" parent="Player" instance=ExtResource("4_a64nh")]
-modulate = Color(0.156863, 0.788235, 0.870588, 1)
-planet_resource = ExtResource("5_vm6v0")
+planet_resource = ExtResource("5_gayi7")
 
 [node name="Enemy" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
 position = Vector2(520, 180)
@@ -113,10 +198,13 @@ offset = Vector2(0, 30)
 anchor_mode = 0
 enabled = false
 
-[node name="PickMeAttack" type="StudioEventEmitter2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tsn6g")
+}
 
 [connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Attack" to="Player" method="_on_attack_pressed"]
-[connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Defend" to="Player" method="_on_defend_pressed"]
+[connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/FlairUp" to="Player" method="_on_flair_up_pressed"]
 [connection signal="defeated" from="Player" to="." method="_on_player_defeated"]
 [connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

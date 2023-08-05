@@ -1,25 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://fjloskjckncm"]
+[gd_scene load_steps=4 format=3 uid="uid://fjloskjckncm"]
 
-[ext_resource type="Texture2D" uid="uid://dxmmy4i1ahh7q" path="res://assets/white_circle.png" id="1_1acsr"]
 [ext_resource type="Script" path="res://code/game/celestials/planet.gd" id="1_3po7y"]
-[ext_resource type="Resource" uid="uid://syelkxn4mm6a" path="res://resources/planet/test_planet.tres" id="2_w8tpc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_iin48"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_1acsr")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Resource" uid="uid://nnxlrpxb2hgj" path="res://resources/planet/coo-coo.tres" id="2_u1ad7"]
+[ext_resource type="SpriteFrames" uid="uid://bh5yqq5qyx4fr" path="res://assets/coo-coo.tres" id="3_0l3lx"]
 
 [node name="Planet" type="Node2D" groups=["Planets"]]
-modulate = Color(0.65098, 0.6, 0.862745, 1)
 script = ExtResource("1_3po7y")
-planet_resource = ExtResource("2_w8tpc")
+planet_resource = ExtResource("2_u1ad7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.07, 0.07)
-sprite_frames = SubResource("SpriteFrames_iin48")
+position = Vector2(0, 4.35808)
+sprite_frames = ExtResource("3_0l3lx")
+animation = &"idle"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 181.0
+offset_right = 246.0
+offset_bottom = 8.0
+text = "Idle"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 182.0
+offset_top = 34.0
+offset_right = 247.0
+offset_bottom = 42.0
+text = "Talk"
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+offset_left = 181.0
+offset_top = 69.0
+offset_right = 246.0
+offset_bottom = 77.0
+text = "Flairupq"
+
+[connection signal="pressed" from="Button" to="." method="idle"]
+[connection signal="pressed" from="Button2" to="." method="talking"]
+[connection signal="pressed" from="Button3" to="." method="increase_flair_up"]

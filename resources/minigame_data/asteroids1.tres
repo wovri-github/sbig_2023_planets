@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MinigameData" load_steps=2 format=3 uid="uid://b3nynmwuctjg6"]
+
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="1_rr2ec"]
+
+[resource]
+script = ExtResource("1_rr2ec")
+minigame_type = 1
+c_is_mad = false
+c_animation_name = ""
+t_minigame_time = 30
+t_sec_every_nonliving_spawn = 1.0
+t_additional_nonliving_speed = 0

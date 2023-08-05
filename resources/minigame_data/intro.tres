@@ -6,4 +6,9 @@
 [resource]
 script = ExtResource("1_sqs0l")
 minigame_type = 0
+c_is_mad = false
+c_animation_name = "intro"
 c_dialoge_res = ExtResource("1_pifia")
+t_minigame_time = 10
+t_sec_every_nonliving_spawn = 1.0
+t_additional_nonliving_speed = 0

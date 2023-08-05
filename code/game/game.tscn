@@ -1,43 +1,36 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnytrcq0a2wyb"]
+[gd_scene load_steps=24 format=3 uid="uid://dnytrcq0a2wyb"]
 
 [ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
 [ext_resource type="Resource" uid="uid://dr76frs0beqo6" path="res://resources/minigame_data/intro.tres" id="2_dsky2"]
 [ext_resource type="PackedScene" uid="uid://b8les3u6x8r6a" path="res://code/game/minigame/travel/travel.tscn" id="2_y2rs1"]
-[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="3_610p1"]
+[ext_resource type="Resource" uid="uid://b3nynmwuctjg6" path="res://resources/minigame_data/asteroids1.tres" id="3_lrcvd"]
+[ext_resource type="Resource" uid="uid://c7cql0jik7wb6" path="res://resources/minigame_data/planet1_cutscene1.tres" id="3_pfsn2"]
 [ext_resource type="PackedScene" uid="uid://2efols75kede" path="res://code/game/minigame/cutscene/cutscene.tscn" id="3_wqbr4"]
 [ext_resource type="PackedScene" uid="uid://chifna77xw1ep" path="res://code/game/background.tscn" id="3_xuqvg"]
-[ext_resource type="Resource" uid="uid://ca7i0q7nk8mhe" path="res://resources/dialogues/test.dialogue" id="4_k35ml"]
+[ext_resource type="Resource" uid="uid://dmsam5n68tikl" path="res://resources/minigame_data/planet1_fight.tres" id="4_r26p3"]
 [ext_resource type="PackedScene" uid="uid://j6uyq1jiernl" path="res://code/game/minigame/fight/fight.tscn" id="5_4t51o"]
-[ext_resource type="Resource" uid="uid://yxqpplm63fu3" path="res://resources/planet/planet1.tres" id="5_aq6k2"]
+[ext_resource type="Resource" uid="uid://c65fdgetdo3fm" path="res://resources/minigame_data/planet1_cutscene2.tres" id="5_stpw2"]
+[ext_resource type="Resource" uid="uid://di1g2xvib37rc" path="res://resources/minigame_data/asteroids2.tres" id="6_om0pg"]
+[ext_resource type="Resource" uid="uid://l77psfiiuxmd" path="res://resources/minigame_data/coo_coo_cutscene1.tres" id="7_pudlm"]
+[ext_resource type="Resource" uid="uid://b8vrnlelqnk7a" path="res://resources/minigame_data/coo_coo_fight.tres" id="8_ec2g6"]
+[ext_resource type="Resource" uid="uid://ccen0get411cd" path="res://resources/minigame_data/coo_coo_cutscene2.tres" id="9_uyuop"]
 [ext_resource type="Script" path="res://code/game/UI.gd" id="10_2ktnm"]
+[ext_resource type="Resource" uid="uid://chry60jhy2vlw" path="res://resources/minigame_data/asteroids3.tres" id="10_r2gy5"]
 [ext_resource type="PackedScene" uid="uid://bgpsmmld5orxv" path="res://code/ui/menu/pause_menu.tscn" id="11_hgi2x"]
 [ext_resource type="PackedScene" uid="uid://cwjv8jaayivo0" path="res://code/ui/menu/settings.tscn" id="12_bafxn"]
-[ext_resource type="PackedScene" uid="uid://dloligsjtfi8r" path="res://code/ui/menu/died_menu.tscn" id="13_huluq"]
-
-[sub_resource type="Resource" id="Resource_ycmqo"]
-script = ExtResource("3_610p1")
-minigame_type = 1
-
-[sub_resource type="Resource" id="Resource_fipid"]
-script = ExtResource("3_610p1")
-minigame_type = 0
-c_dialoge_res = ExtResource("4_k35ml")
-c_enemy_res = ExtResource("5_aq6k2")
-
-[sub_resource type="Resource" id="Resource_ndm43"]
-script = ExtResource("3_610p1")
-minigame_type = 2
-f_enemy_res = ExtResource("5_aq6k2")
+[ext_resource type="Resource" uid="uid://dqiv3y5xx5ddl" path="res://resources/minigame_data/sun_cutscene.tres" id="12_i0yos"]
+[ext_resource type="PackedScene" uid="uid://c4bxnhtbysf6u" path="res://code/ui/menu/died_menu.tscn" id="13_huluq"]
+[ext_resource type="Texture2D" uid="uid://dqs518asulx7a" path="res://assets/save.png" id="14_vkrnq"]
+[ext_resource type="Script" path="res://code/game/save_symbol.gd" id="15_isft5"]
+[ext_resource type="PackedScene" uid="uid://dqa125kr4om0v" path="res://code/settings/brightness.tscn" id="16_qkdjg"]
 
 [node name="Game" type="CanvasLayer"]
-offset = Vector2(0, -30)
-transform = Transform2D(1, 0, 0, 1, 0, -30)
-follow_viewport_enabled = true
 script = ExtResource("1_6tnbp")
-plot_minigames = Array[ExtResource("3_610p1")]([ExtResource("2_dsky2"), SubResource("Resource_ycmqo"), SubResource("Resource_fipid"), SubResource("Resource_ndm43")])
+plot_minigames = Array[Resource("res://code/game/minigame/minigame_data.gd")]([ExtResource("2_dsky2"), ExtResource("3_lrcvd"), ExtResource("3_pfsn2"), ExtResource("4_r26p3"), ExtResource("5_stpw2"), ExtResource("6_om0pg"), ExtResource("7_pudlm"), ExtResource("8_ec2g6"), ExtResource("9_uyuop"), ExtResource("10_r2gy5"), ExtResource("12_i0yos")])
 
 [node name="Background" parent="." instance=ExtResource("3_xuqvg")]
-visible = false
+follow_viewport_enabled = true
+scroll_ignore_camera_zoom = false
 
 [node name="Cutscene" parent="." instance=ExtResource("3_wqbr4")]
 visible = false
@@ -68,9 +61,33 @@ visible = false
 
 [node name="DiedMenu" parent="UI" instance=ExtResource("13_huluq")]
 visible = false
+offset_left = -106.807
+offset_top = -147.802
+offset_right = 106.807
+offset_bottom = 147.802
+
+[node name="SaveSymbol" type="TextureRect" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("14_vkrnq")
+expand_mode = 1
+script = ExtResource("15_isft5")
+
+[node name="Brightness" parent="UI" instance=ExtResource("16_qkdjg")]
+
+[node name="Brightness" parent="." instance=ExtResource("16_qkdjg")]
 
 [connection signal="minigame_ended" from="Cutscene" to="." method="_on_minigame_ended"]
 [connection signal="minigame_ended" from="Travel" to="." method="_on_minigame_ended"]
 [connection signal="minigame_ended" from="Fight" to="." method="_on_minigame_ended"]
+[connection signal="restart_clicked" from="UI/PauseMenu" to="." method="_on_pause_menu_restart_clicked"]
 [connection signal="settings_clicked" from="UI/PauseMenu" to="UI" method="_on_settings_clicked"]
-[connection signal="settings_clicked" from="UI/DiedMenu" to="UI" method="_on_settings_clicked"]

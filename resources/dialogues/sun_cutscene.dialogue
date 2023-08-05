@@ -1,0 +1,44 @@
+~ first
+Sun: Simba?
+Pick-me: Ah no, but please let me join your universe! Here’s all the suggestions combined from my Planet Senpais!
+=> selection
+
+~ selection
+if true#was_sunglasses and was_tickle and was_joke
+	Sun: Okey, okey. I will add you to my universe.
+	do emit("do_animation", "show_calendar")
+	: And thus, Pick-me-pretty-please got to join the Univrow Universe and the Solar Calendar too.
+	[i]Skip to end the game
+	=> END
+else
+	Choose:
+	- Tickle the Sun
+		set was_tickle = true
+		do emit("change_planet_animation", "tickle")
+		Pick-me: [i]tickle, tickle, tickle, tickle, tickle, tickle, tickle...
+		S un: Hahah,ahahah,ahhahah,ahha,...
+		=> selection
+	- Give Sunglasses to the Sun 
+		Pick-me: Here, [do emit("do_animation", "throw_sunglasses")] take the sunglasses!
+		set was_sunglasses = true
+		=> selection
+	- Tell it a joke
+		Pick-me: I will tell you a joke!
+		- Hehehihihuhahe => bad_joke
+		- Haohaohohojeez 
+			set was_joke = true 
+			=> good_joke
+		- Heohihijeezhah => bad_joke
+		- Hohohahohuhahe => bad_joke
+
+~ bad_joke
+Sun: What? it was even funny?
+Sun: Go away
+do emit("dialogue_result", false)
+...
+
+=> END
+
+~ good_joke
+Sun: Hahahahahhah...
+=> selection

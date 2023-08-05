@@ -89,6 +89,7 @@ scroll_active = false
 layout_mode = 2
 text = "Dialogue"
 skip_action = "skip"
+pause_at_characters = ".?!,"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]
 layout_mode = 2
@@ -134,3 +135,5 @@ value = 2
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]
+[connection signal="finished_typing" from="Balloon/Margin/VBox/DialogueLabel" to="." method="_on_dialogue_label_finished_typing"]
+[connection signal="spoke" from="Balloon/Margin/VBox/DialogueLabel" to="." method="_on_dialogue_label_spoke"]

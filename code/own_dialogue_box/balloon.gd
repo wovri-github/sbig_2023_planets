@@ -236,3 +236,23 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_margin_resized() -> void:
 	handle_resize()
+
+
+func _on_dialogue_label_spoke(letter, letter_index, speed):
+	if player.highlight == true:
+		if letter == "!":
+			player.scream()
+		else:
+			player.talking()
+	else:
+		if letter == "!":
+			enemy.scream()
+		else:
+			enemy.talking()
+
+
+func _on_dialogue_label_finished_typing():
+	if player.highlight == true:
+		player.idle()
+	else:
+		enemy.idle()

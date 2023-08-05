@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MinigameData" load_steps=3 format=3 uid="uid://b8vrnlelqnk7a"]
+
+[ext_resource type="Resource" uid="uid://nnxlrpxb2hgj" path="res://resources/planet/coo-coo.tres" id="1_8xl5p"]
+[ext_resource type="Script" path="res://code/game/minigame/minigame_data.gd" id="2_rgphu"]
+
+[resource]
+script = ExtResource("2_rgphu")
+minigame_type = 2
+c_is_mad = false
+c_animation_name = ""
+t_minigame_time = 10
+t_sec_every_nonliving_spawn = 1.0
+t_additional_nonliving_speed = 0
+f_enemy_res = ExtResource("1_8xl5p")

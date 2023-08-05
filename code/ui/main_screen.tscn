@@ -1,21 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://03v5ce72xk1p"]
+[gd_scene load_steps=8 format=3 uid="uid://03v5ce72xk1p"]
 
 [ext_resource type="Script" path="res://code/ui/main_screen.gd" id="1_kg0rm"]
 [ext_resource type="PackedScene" uid="uid://d2ruirci6oic6" path="res://code/ui/menu/main_menu.tscn" id="1_kw6wf"]
 [ext_resource type="PackedScene" uid="uid://cwjv8jaayivo0" path="res://code/ui/menu/settings.tscn" id="2_jbkk5"]
 [ext_resource type="PackedScene" uid="uid://c0r44eqs2nhnb" path="res://code/ui/menu/credits.tscn" id="3_cor1s"]
+[ext_resource type="PackedScene" uid="uid://dqa125kr4om0v" path="res://code/settings/brightness.tscn" id="5_1n72j"]
+[ext_resource type="PackedScene" uid="uid://qxofsnnypkp3" path="res://code/game/celestials/player/player_travel.tscn" id="6_qw7yx"]
+[ext_resource type="PackedScene" uid="uid://chifna77xw1ep" path="res://code/game/background.tscn" id="7_q8sst"]
 
 [node name="MainScreen" type="CanvasLayer"]
 script = ExtResource("1_kg0rm")
 
 [node name="MainMenu" parent="." instance=ExtResource("1_kw6wf")]
-offset_top = -116.0
 
 [node name="Settings" parent="." instance=ExtResource("2_jbkk5")]
 visible = false
 
 [node name="Credits" parent="." instance=ExtResource("3_cor1s")]
 visible = false
+
+[node name="Brightness" parent="." instance=ExtResource("5_1n72j")]
+
+[node name="PlayerTravel" parent="." instance=ExtResource("6_qw7yx")]
+position = Vector2(113, 195)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("7_q8sst")]
 
 [connection signal="continue_clicked" from="MainMenu" to="." method="_on_main_menu_continue_clicked"]
 [connection signal="new_game_clicked" from="MainMenu" to="." method="_on_main_menu_new_game_clicked"]

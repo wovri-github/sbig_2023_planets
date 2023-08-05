@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 signal player_died()
+signal player_went_to_next_plot()
 
-@export var debug = true
 @export var plot_minigames: Array[MinigameData]
 var current_minigame: Minigame
 var plot_tracker: int = Storage.get_value("game", "plot_tracker", 0)
@@ -15,14 +15,10 @@ var plot_tracker: int = Storage.get_value("game", "plot_tracker", 0)
 
 
 func _ready():
-	if debug == false:
-		$Debug.queue_free()
 	current_minigame = minigames[plot_minigames[plot_tracker].minigame_type]
 	current_minigame._enter(plot_minigames[plot_tracker])
 
 func change_current_game(change_to: Minigame.TYPE, data: MinigameData = null):
-#	if minigames[change_to] == current_minigame:
-#		return
 	make_transition(change_to)
 	current_minigame._exit()
 	current_minigame = minigames[change_to]
@@ -33,21 +29,16 @@ func next_game_plot():
 	plot_tracker += 1
 	Storage.set_value("game", "plot_tracker", plot_tracker)
 	if plot_tracker >= plot_minigames.size():
-		print("You win")
-		await get_tree().create_timer(0.25).timeout
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://code/ui/menu/win_menu.tscn")
 		return
 	var minigame_data = plot_minigames[plot_tracker]
 	change_current_game(minigame_data.minigame_type, minigame_data)
 
 func make_transition(change_to: Minigame.TYPE):
-	var tween = get_tree().create_tween()
 	if change_to == Minigame.TYPE.CUTSCENE or change_to == Minigame.TYPE.FIGHT:
-		tween.tween_property(self, "offset", Vector2(0, -30), 1.0)
+		$Background.is_moving = false
 	else:
-		tween.tween_property(self, "offset", Vector2(0, 0), 1.0)
-	await tween.finished
-
+		$Background.is_moving = true
 
 func _on_minigame_ended(is_success):
 	if is_success:
@@ -57,3 +48,8 @@ func _on_minigame_ended(is_success):
 		await $UI/DiedMenu.visibility_changed
 		var minigame_data = plot_minigames[plot_tracker]
 		change_current_game(minigame_data.minigame_type, minigame_data)
+
+
+func _on_pause_menu_restart_clicked():
+	var minigame_data = plot_minigames[plot_tracker]
+	change_current_game(minigame_data.minigame_type, minigame_data)

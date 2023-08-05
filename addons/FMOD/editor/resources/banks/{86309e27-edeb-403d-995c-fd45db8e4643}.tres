@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://fmod project/sbig2023/banks/Desktop/Characters.bank"
-modified_time = 1690929123
+modified_time = 1690937122
 path = "bank:/Characters"
 guid = "{86309e27-edeb-403d-995c-fd45db8e4643}"
 name = "Characters"

@@ -113,6 +113,8 @@ offset = Vector2(0, 30)
 anchor_mode = 0
 enabled = false
 
+[node name="PickMeAttack" type="StudioEventEmitter2D" parent="."]
+
 [connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Attack" to="Player" method="_on_attack_pressed"]
 [connection signal="pressed" from="UI/FightManager/MarginContainer/HBoxContainer/Buttons/Defend" to="Player" method="_on_defend_pressed"]
 [connection signal="defeated" from="Player" to="." method="_on_player_defeated"]

@@ -14,7 +14,7 @@ flair_up_sounds = Array[AudioStream]([ExtResource("2_gkwhs"), ExtResource("3_or4
 planet_resource = ExtResource("2_u1ad7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 4.06393)
+position = Vector2(0, 2.36348)
 sprite_frames = ExtResource("3_0l3lx")
 animation = &"idle"
 

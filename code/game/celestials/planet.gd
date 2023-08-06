@@ -43,7 +43,7 @@ var hurt_sound: Array
 var oh_sound: Array
 
 @onready var highlight_color = self.modulate
-@onready var no_highlight_color = self.modulate * 0.9
+@onready var no_highlight_color = Color(0.8,0.8,0.8)
 @onready var floating_tween: Tween = self.create_tween().set_loops()
 @onready var dialogue_name = planet_resource.dialogue_name
 @onready var health: int = planet_resource.health

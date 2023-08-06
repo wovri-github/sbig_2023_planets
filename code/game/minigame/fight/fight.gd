@@ -27,7 +27,6 @@ func enter(data: MinigameData):
 	current_turn._start_turn()
 
 
-
 func swap_turn():
 	current_turn._end_turn()
 	if celestials[TURN.PLAYER] == current_turn:

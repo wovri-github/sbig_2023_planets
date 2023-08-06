@@ -11,6 +11,7 @@ func _init():
 
 func setup_complete():
 	attack_button.text = "Attack %d" % damage
+	flair_up_button.text = "Flair up %d/3" % flair_up
 
 func start_turn():
 	for button in [attack_button, flair_up_button]:
@@ -35,7 +36,6 @@ func reset_flair_up():
 	$Planet.idle()
 	flair_up = 0
 	damage = planet_res.damage
-	flair_up_button.text = "Flair up %d/3" % flair_up
 	setup_complete()
 
 

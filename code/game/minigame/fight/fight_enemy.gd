@@ -14,6 +14,7 @@ func _ready():
 func reset_flair_up():
 	$Planet.idle()
 	flair_up = 0
+	$EnemyFlare/LoopEnemyFlare0.trigger()
 	damage = planet_res.damage
 
 func start_turn():
@@ -21,6 +22,15 @@ func start_turn():
 		if flair_up < max_flair_up:
 			$Planet.increase_flair_up()
 			flair_up += 1
+			if flair_up == 1:
+				$EnemyFlareUp1.play()
+				$EnemyFlare/LoopEnemyFlare1.trigger()
+			elif flair_up < 3:
+				$EnemyFlareUp2.play()
+				$EnemyFlare/LoopEnemyFlare2.trigger()
+			elif flair_up == max_flair_up:
+				$EnemyFlareUp3.play()
+				$EnemyFlare/LoopEnemyFlare3.trigger()
 			damage *= 2
 			await $Planet/AnimatedSprite2D.animation_finished
 			emit_signal("turn_ended")
@@ -31,6 +41,15 @@ func start_turn():
 		if flair_up < max_flair_up:
 			$Planet.increase_flair_up()
 			flair_up += 1
+			if flair_up == 1:
+				$EnemyFlareUp1.play()
+				$EnemyFlare/LoopEnemyFlare1.trigger()
+			elif flair_up < 3:
+				$EnemyFlareUp2.play()
+				$EnemyFlare/LoopEnemyFlare2.trigger()
+			elif flair_up == max_flair_up:
+				$EnemyFlareUp3.play()
+				$EnemyFlare/LoopEnemyFlare3.trigger()
 			damage *= 2
 			await $Planet/AnimatedSprite2D.animation_finished
 			emit_signal("turn_ended")

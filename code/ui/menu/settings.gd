@@ -14,6 +14,7 @@ func _ready():
 
 
 func _on_close_pressed():
+	$ConfirmSound.play()
 	super.close()
 
 
@@ -22,10 +23,12 @@ func _on_h_slider_value_changed(value):
 
 
 func _on_h_slider_drag_ended(value_changed):
+	$ConfirmSound.play()
 	Storage.set_value("settings", "brightness", settings.brightness)
 
 
 func _on_sound_h_slider_value_changed(value):
+	$SelectSound.play()
 	AudioServer.set_bus_volume_db(0, value)
 	if value <= -19:
 		AudioServer.set_bus_mute(0, true)

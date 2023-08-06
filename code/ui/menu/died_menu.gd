@@ -8,14 +8,17 @@ func _on_visibility_changed():
 
 
 func _on_respawn_pressed():
+	$UnpauseSound.play()
 	self.hide()
 
 
 func _on_settings_pressed():
+	$SelectSound.play()
 	emit_signal("settings_clicked")
 
 
 func _on_exit_pressed():
+	$ConfirmSound.play()
 	get_tree().set_pause(false)
 	get_tree().change_scene_to_file("res://code/ui/main_screen.tscn")
 

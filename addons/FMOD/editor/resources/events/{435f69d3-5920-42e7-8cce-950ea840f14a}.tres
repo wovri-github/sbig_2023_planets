@@ -1,0 +1,29 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://dvp4tswb3mowy"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_oqcqn"]
+data1 = 1155627394
+data2 = 2021583253
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_msnn3"]
+name = "flareparameter"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_oqcqn")
+maximum = 3.0
+flags = 24
+guid = "{e6f201e6-118d-4a78-b03a-c3b70842556c}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_vyiu6"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_msnn3")
+labels = ["flare0", "flare1", "flare2", "flare3"]
+path = "parameter:/flareparameter"
+guid = "{e6f201e6-118d-4a78-b03a-c3b70842556c}"
+name = "flareparameter"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{e6f201e6-118d-4a78-b03a-c3b70842556c}": SubResource("ParameterAsset_vyiu6")
+}
+path = "event:/Flares/loop_flare_player"
+guid = "{435f69d3-5920-42e7-8cce-950ea840f14a}"
+name = "loop_flare_player"

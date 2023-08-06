@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddj88au0fq6kb"
+path="res://.godot/imported/sound_UI_unpause.wav-7b24c63669e91ca7211982e988c1c38f.sample"
+
+[deps]
+
+source_file="res://fmod project/sbig2023/Assets/sound_UI_unpause.wav"
+dest_files=["res://.godot/imported/sound_UI_unpause.wav-7b24c63669e91ca7211982e988c1c38f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

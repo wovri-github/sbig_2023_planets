@@ -26,3 +26,4 @@ func movement():
 
 func knockback(force, from_position):
 	velocity = (global_position - from_position).normalized() * force
+	$PlayerBoing.play()

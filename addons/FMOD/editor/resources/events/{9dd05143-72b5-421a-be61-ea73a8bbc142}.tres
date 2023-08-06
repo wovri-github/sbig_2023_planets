@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dy3xb8tn2qvhu"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Characters/Planet 1/sound_planet1_attack"
+guid = "{9dd05143-72b5-421a-be61-ea73a8bbc142}"
+name = "sound_planet1_attack"

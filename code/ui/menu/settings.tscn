@@ -1,10 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwjv8jaayivo0"]
+[gd_scene load_steps=6 format=3 uid="uid://cwjv8jaayivo0"]
 
 [ext_resource type="Script" path="res://code/ui/menu/settings.gd" id="1_5w8lb"]
 [ext_resource type="Theme" uid="uid://clefja284aktg" path="res://code/ui/menu/default_theme.tres" id="1_ydpgl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iw8wd"]
 font_size = 24
+
+[sub_resource type="EventAsset" id="EventAsset_7vlfr"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Select"
+guid = "{43d191c0-e538-480e-b59c-454ca2c830e1}"
+name = "Select"
+
+[sub_resource type="EventAsset" id="EventAsset_yfsd5"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Confirm"
+guid = "{1e9a621e-e9d4-4ddf-8701-b1e42a6e0417}"
+name = "Confirm"
 
 [node name="Settings" type="PanelContainer"]
 anchors_preset = 8
@@ -72,6 +88,12 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Close"
+
+[node name="SelectSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_7vlfr")
+
+[node name="ConfirmSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_yfsd5")
 
 [connection signal="drag_ended" from="Margin/VBox/Brightness/HSlider" to="." method="_on_h_slider_drag_ended"]
 [connection signal="value_changed" from="Margin/VBox/Brightness/HSlider" to="." method="_on_h_slider_value_changed"]

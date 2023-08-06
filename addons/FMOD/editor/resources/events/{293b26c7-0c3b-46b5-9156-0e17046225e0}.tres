@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dtnc0dr6ellxq"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Player_meteor_bounce"
+guid = "{293b26c7-0c3b-46b5-9156-0e17046225e0}"
+name = "Player_meteor_bounce"

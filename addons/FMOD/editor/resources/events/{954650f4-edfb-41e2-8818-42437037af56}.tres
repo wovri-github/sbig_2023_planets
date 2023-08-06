@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://befbhkfapesvc"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Unpause"
+guid = "{954650f4-edfb-41e2-8818-42437037af56}"
+name = "Unpause"

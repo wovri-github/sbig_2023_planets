@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c5q7sy71e3qec"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/PlanetSpeech"
+guid = "{23e2f8ba-b220-488a-9791-391b7b00fe27}"
+name = "PlanetSpeech"

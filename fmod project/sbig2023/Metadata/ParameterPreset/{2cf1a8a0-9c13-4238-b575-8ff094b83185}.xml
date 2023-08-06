@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{2cf1a8a0-9c13-4238-b575-8ff094b83185}">
+		<property name="name">
+			<value>flareparameter</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e6f201e6-118d-4a78-b03a-c3b70842556c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e6f201e6-118d-4a78-b03a-c3b70842556c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>flare0</value>
+			<value>flare1</value>
+			<value>flare2</value>
+			<value>flare3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

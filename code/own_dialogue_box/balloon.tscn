@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://code/own_dialogue_box/balloon.gd" id="1_aj661"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_h87yd"]
-[ext_resource type="EventAsset" uid="uid://bf6vxudi5rah8" path="res://addons/FMOD/editor/resources/events/{a34eec7e-2661-4c0e-9019-b4fdb2e04562}.tres" id="3_vbx6x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d24i"]
 content_margin_left = 40.0
@@ -18,41 +17,30 @@ content_margin_right = 5.0
 content_margin_bottom = 5.0
 draw_center = false
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_imuth"]
-data1 = 1038224652
-data2 = 2775775043
+[sub_resource type="EventAsset" id="EventAsset_87hol"]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/PlanetSpeech"
+guid = "{23e2f8ba-b220-488a-9791-391b7b00fe27}"
+name = "PlanetSpeech"
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag"]
-name = "Person Speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_imuth")
-maximum = 4.0
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_euvld"]
+data1 = 653125314
+data2 = 230589344
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_hc67q"]
+name = "PlanetSpeaking"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_euvld")
+maximum = 5.0
 flags = 28
-guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
+guid = "{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}"
 
-[sub_resource type="ParameterAsset" id="ParameterAsset_g8d5i"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_ibgag")
-labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
-path = "parameter:/Person Speaking"
-guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
-name = "Person Speaking"
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_5d6hm"]
-data1 = 1038224652
-data2 = 2775775043
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_0liyt"]
-name = "Person Speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_5d6hm")
-maximum = 4.0
-flags = 28
-guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_q1lqq"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_0liyt")
-labels = ["Nobody", "Pickme", "Value C", "CooCoo", "Sun"]
-path = "parameter:/Person Speaking"
-guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
-name = "Person Speaking"
+[sub_resource type="ParameterAsset" id="ParameterAsset_s1etg"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_hc67q")
+labels = ["Nobody", "Pickme", "Planet1", "CooCoo", "Sun", "Narrator"]
+path = "parameter:/PlanetSpeaking"
+guid = "{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}"
+name = "PlanetSpeaking"
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -111,27 +99,31 @@ hint_underlined = false
 [node name="Speaking" type="StudioEventEmitter2D" parent="."]
 play_event = 1
 stop_event = 3
-event = ExtResource("3_vbx6x")
+event = SubResource("EventAsset_87hol")
 
 [node name="NobodySpeaking" type="StudioGlobalParameterTrigger" parent="."]
-parameter = SubResource("ParameterAsset_g8d5i")
+parameter = SubResource("ParameterAsset_s1etg")
 value = 0.0
 
 [node name="PickMeSpeaking" type="StudioGlobalParameterTrigger" parent="."]
-parameter = SubResource("ParameterAsset_g8d5i")
+parameter = SubResource("ParameterAsset_s1etg")
 value = 1
 
+[node name="Planet1Speaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_s1etg")
+value = 2
+
 [node name="CooCooSpeaking" type="StudioGlobalParameterTrigger" parent="."]
-parameter = SubResource("ParameterAsset_g8d5i")
+parameter = SubResource("ParameterAsset_s1etg")
 value = 3
 
 [node name="SunSpeaking" type="StudioGlobalParameterTrigger" parent="."]
-parameter = SubResource("ParameterAsset_g8d5i")
+parameter = SubResource("ParameterAsset_s1etg")
 value = 4
 
-[node name="Planet1Speaking" type="StudioGlobalParameterTrigger" parent="."]
-parameter = SubResource("ParameterAsset_q1lqq")
-value = 2
+[node name="NarratorSpeaking" type="StudioGlobalParameterTrigger" parent="."]
+parameter = SubResource("ParameterAsset_s1etg")
+value = 5
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

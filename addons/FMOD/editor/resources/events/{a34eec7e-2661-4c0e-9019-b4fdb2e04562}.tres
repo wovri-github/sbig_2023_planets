@@ -3,6 +3,6 @@
 [resource]
 min_distance = 1.0
 max_distance = 20.0
-path = "event:/Speech"
+path = "event:/speech"
 guid = "{a34eec7e-2661-4c0e-9019-b4fdb2e04562}"
-name = "Speech"
+name = "speech"

@@ -1,0 +1,19 @@
+[gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://ci7baowghjyup"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_fq6hm"]
+data1 = 653125314
+data2 = 230589344
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_aomn1"]
+name = "PlanetSpeaking"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_fq6hm")
+maximum = 5.0
+flags = 28
+guid = "{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}"
+
+[resource]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_aomn1")
+labels = ["Nobody", "Pickme", "Planet1", "CooCoo", "Sun", "Narrator"]
+path = "parameter:/PlanetSpeaking"
+guid = "{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}"
+name = "PlanetSpeaking"

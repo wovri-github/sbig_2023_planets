@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c77wu3k5oobbg"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Select"
+guid = "{43d191c0-e538-480e-b59c-454ca2c830e1}"
+name = "Select"

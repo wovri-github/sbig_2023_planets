@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{14bfd67d-6272-4a3c-b542-430c83416b3a}">
+	<object class="ParameterPreset" id="{699b6d2f-1a58-48b2-847e-bd87fd7f4925}">
 		<property name="name">
-			<value>Person Speaking</value>
+			<value>PlanetSpeaking</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bf9a2728-cce9-4ac2-a6b7-a114d351acff}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{9e7d0363-6ece-4382-b393-279ebac1f089}</destination>
+			<destination>{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{9e7d0363-6ece-4382-b393-279ebac1f089}">
+	<object class="GameParameter" id="{e42cbfd6-a45b-4fe7-ac01-afd3f2d717a3}">
 		<property name="parameterType">
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>5</value>
+			<value>6</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Nobody</value>
@@ -24,6 +24,7 @@
 			<value>Planet1</value>
 			<value>CooCoo</value>
 			<value>Sun</value>
+			<value>Narrator</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>

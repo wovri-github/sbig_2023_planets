@@ -1,11 +1,84 @@
-[gd_scene load_steps=11 format=3 uid="uid://j6uyq1jiernl"]
+[gd_scene load_steps=25 format=3 uid="uid://j6uyq1jiernl"]
 
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight.gd" id="1_830ul"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_player.gd" id="2_mma2m"]
+[ext_resource type="EventAsset" uid="uid://0bsenjomdskf" path="res://addons/FMOD/editor/resources/events/{088bdf4b-4657-4311-90df-6d6aa012ef9c}.tres" id="4_601et"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="4_a64nh"]
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="5_gayi7"]
+[ext_resource type="EventAsset" uid="uid://bg7g3a2v5djde" path="res://addons/FMOD/editor/resources/events/{6bd10b6d-933b-4d2f-b3d1-3d3e59e7a464}.tres" id="5_gl8eu"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_enemy.gd" id="5_jwdx6"]
 [ext_resource type="Script" path="res://code/game/minigame/fight/fight_manager.gd" id="6_i3g3t"]
+[ext_resource type="EventAsset" uid="uid://vqiswdu6rso7" path="res://addons/FMOD/editor/resources/events/{39c01a56-c02a-4577-a201-57a7ed7765cc}.tres" id="6_vco2v"]
+[ext_resource type="EventAsset" uid="uid://bna842mtbjrkt" path="res://addons/FMOD/editor/resources/events/{d622a98e-9935-4101-90b8-718a1ea6180e}.tres" id="7_1v3an"]
+[ext_resource type="EventAsset" uid="uid://dvp4tswb3mowy" path="res://addons/FMOD/editor/resources/events/{435f69d3-5920-42e7-8cce-950ea840f14a}.tres" id="10_0074o"]
+
+[sub_resource type="EventAsset" id="EventAsset_xkt5g"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_2_player"
+guid = "{c1eae3bb-9193-4fe9-8db7-167618e18e06}"
+name = "sound_flareup_2_player"
+
+[sub_resource type="EventAsset" id="EventAsset_c8wht"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_3_player"
+guid = "{d74222d3-66f9-4eb4-ad8b-8dc71e0cebdd}"
+name = "sound_flareup_3_player"
+
+[sub_resource type="EventAsset" id="EventAsset_i8u6w"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_1_enemy"
+guid = "{476209d9-5d57-4abc-a113-db233b70bb33}"
+name = "sound_flareup_1_enemy"
+
+[sub_resource type="EventAsset" id="EventAsset_nfbru"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_2_enemy"
+guid = "{d5340009-6ac4-4540-9a0a-f6e6cdb15d85}"
+name = "sound_flareup_2_enemy"
+
+[sub_resource type="EventAsset" id="EventAsset_o4qkb"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_3_enemy"
+guid = "{fd03fe8c-5fb2-4a68-8686-5a3e3e711f94}"
+name = "sound_flareup_3_enemy"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_wjbcn"]
+data1 = 1155627394
+data2 = 2021583253
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_5wqfc"]
+name = "flareparameter"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_wjbcn")
+maximum = 3.0
+flags = 24
+guid = "{e6f201e6-118d-4a78-b03a-c3b70842556c}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_gb7ur"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_5wqfc")
+labels = ["flare0", "flare1", "flare2", "flare3"]
+path = "parameter:/flareparameter"
+guid = "{e6f201e6-118d-4a78-b03a-c3b70842556c}"
+name = "flareparameter"
+
+[sub_resource type="EventAsset" id="EventAsset_047b3"]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{e6f201e6-118d-4a78-b03a-c3b70842556c}": SubResource("ParameterAsset_gb7ur")
+}
+path = "event:/Flares/loop_flare_enemy"
+guid = "{7753335e-ec87-4d19-876d-fc2d4451a384}"
+name = "loop_flare_enemy"
 
 [sub_resource type="Animation" id="Animation_tbedw"]
 length = 0.001
@@ -185,6 +258,53 @@ enemy = NodePath("../Enemy")
 [node name="Planet" parent="Player" instance=ExtResource("4_a64nh")]
 planet_resource = ExtResource("5_gayi7")
 
+[node name="PlayerFight" type="StudioEventEmitter2D" parent="Player"]
+event = ExtResource("4_601et")
+
+[node name="PlayerHurt" type="StudioEventEmitter2D" parent="Player"]
+event = ExtResource("5_gl8eu")
+
+[node name="PlayerOh" type="StudioEventEmitter2D" parent="Player"]
+event = ExtResource("6_vco2v")
+
+[node name="PlayerFlareUp1" type="StudioEventEmitter2D" parent="Player"]
+event = ExtResource("7_1v3an")
+position = Vector2(-120, -180)
+
+[node name="PlayerFlareUp2" type="StudioEventEmitter2D" parent="Player"]
+event = SubResource("EventAsset_xkt5g")
+position = Vector2(-120, -180)
+
+[node name="PlayerFlareUp3" type="StudioEventEmitter2D" parent="Player"]
+event = SubResource("EventAsset_c8wht")
+position = Vector2(-120, -180)
+
+[node name="PlayerFlare" type="StudioEventEmitter2D" parent="Player"]
+play_event = 1
+stop_event = 3
+event = ExtResource("10_0074o")
+position = Vector2(-120, -180)
+
+[node name="LoopPlayerFlare0" type="StudioParameterTrigger" parent="Player"]
+studio_event_emitter = NodePath("../PlayerFlare")
+event = ExtResource("10_0074o")
+parameter_flareparameter = 0
+
+[node name="LoopPlayerFlare1" type="StudioParameterTrigger" parent="Player"]
+studio_event_emitter = NodePath("../PlayerFlare")
+event = ExtResource("10_0074o")
+parameter_flareparameter = 1
+
+[node name="LoopPlayerFlare2" type="StudioParameterTrigger" parent="Player"]
+studio_event_emitter = NodePath("../PlayerFlare")
+event = ExtResource("10_0074o")
+parameter_flareparameter = 2
+
+[node name="LoopPlayerFlare3" type="StudioParameterTrigger" parent="Player"]
+studio_event_emitter = NodePath("../PlayerFlare")
+event = ExtResource("10_0074o")
+parameter_flareparameter = 3
+
 [node name="Enemy" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
 position = Vector2(520, 180)
 script = ExtResource("5_jwdx6")
@@ -192,6 +312,42 @@ fight_manager = NodePath("../UI/FightManager")
 enemy = NodePath("../Player")
 
 [node name="Planet" parent="Enemy" instance=ExtResource("4_a64nh")]
+
+[node name="EnemyFlareUp1" type="StudioEventEmitter2D" parent="Enemy"]
+event = SubResource("EventAsset_i8u6w")
+position = Vector2(-520, -180)
+
+[node name="EnemyFlareUp2" type="StudioEventEmitter2D" parent="Enemy"]
+event = SubResource("EventAsset_nfbru")
+position = Vector2(-520, -180)
+
+[node name="EnemyFlareUp3" type="StudioEventEmitter2D" parent="Enemy"]
+event = SubResource("EventAsset_o4qkb")
+position = Vector2(-520, -180)
+
+[node name="EnemyFlare" type="StudioEventEmitter2D" parent="Enemy"]
+event = SubResource("EventAsset_047b3")
+position = Vector2(-520, -180)
+
+[node name="LoopEnemyFlare0" type="StudioParameterTrigger" parent="Enemy/EnemyFlare"]
+studio_event_emitter = NodePath("..")
+event = SubResource("EventAsset_047b3")
+parameter_flareparameter = 0.0
+
+[node name="LoopEnemyFlare1" type="StudioParameterTrigger" parent="Enemy/EnemyFlare"]
+studio_event_emitter = NodePath("..")
+event = SubResource("EventAsset_047b3")
+parameter_flareparameter = 1
+
+[node name="LoopEnemyFlare2" type="StudioParameterTrigger" parent="Enemy/EnemyFlare"]
+studio_event_emitter = NodePath("..")
+event = SubResource("EventAsset_047b3")
+parameter_flareparameter = 2
+
+[node name="LoopEnemyFlare3" type="StudioParameterTrigger" parent="Enemy/EnemyFlare"]
+studio_event_emitter = NodePath("..")
+event = SubResource("EventAsset_047b3")
+parameter_flareparameter = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 30)

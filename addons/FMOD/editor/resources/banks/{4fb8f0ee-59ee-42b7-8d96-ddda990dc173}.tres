@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://c0lxfr60j3qfb"]
+
+[resource]
+file_path = "res://fmod project/sbig2023/Banks/Desktop/Combat.bank"
+modified_time = 1691298226
+path = "bank:/Combat"
+guid = "{4fb8f0ee-59ee-42b7-8d96-ddda990dc173}"
+name = "Combat"

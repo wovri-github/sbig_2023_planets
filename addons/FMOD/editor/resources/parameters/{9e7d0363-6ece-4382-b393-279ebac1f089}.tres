@@ -1,19 +1,19 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://h8edn1ev1vek"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_tqj4o"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_aqg4a"]
 data1 = 1038224652
 data2 = 2775775043
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_e3axc"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_xmyes"]
 name = "Person Speaking"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_tqj4o")
-maximum = 4.0
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_aqg4a")
+maximum = 5.0
 flags = 28
 guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_e3axc")
-labels = ["Nobody", "Pickme", "Planet1", "CooCoo", "Sun"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_xmyes")
+labels = ["Nobody", "Pickme", "Planet1", "CooCoo", "Sun", "Narrator"]
 path = "parameter:/Person Speaking"
 guid = "{9e7d0363-6ece-4382-b393-279ebac1f089}"
 name = "Person Speaking"

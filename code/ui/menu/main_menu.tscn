@@ -1,7 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2ruirci6oic6"]
+[gd_scene load_steps=7 format=3 uid="uid://d2ruirci6oic6"]
 
 [ext_resource type="Theme" uid="uid://clefja284aktg" path="res://code/ui/menu/default_theme.tres" id="1_1v6wo"]
 [ext_resource type="Script" path="res://code/ui/menu/main_menu.gd" id="1_tiedm"]
+
+[sub_resource type="EventAsset" id="EventAsset_5w764"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Pause"
+guid = "{9c7ece2e-7c4a-4ade-b985-fdbc4f9da204}"
+name = "Pause"
+
+[sub_resource type="EventAsset" id="EventAsset_ikch4"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Unpause"
+guid = "{954650f4-edfb-41e2-8818-42437037af56}"
+name = "Unpause"
+
+[sub_resource type="EventAsset" id="EventAsset_u4nuh"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Select"
+guid = "{43d191c0-e538-480e-b59c-454ca2c830e1}"
+name = "Select"
+
+[sub_resource type="EventAsset" id="EventAsset_2krla"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Confirm"
+guid = "{1e9a621e-e9d4-4ddf-8701-b1e42a6e0417}"
+name = "Confirm"
 
 [node name="MainMenu" type="PanelContainer"]
 anchors_preset = 8
@@ -48,6 +80,18 @@ text = "Credits"
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Exit"
+
+[node name="PauseSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_5w764")
+
+[node name="UnpauseSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_ikch4")
+
+[node name="SelectSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_u4nuh")
+
+[node name="ConfirmSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_2krla")
 
 [connection signal="pressed" from="Margin/VBox/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Margin/VBox/NewGame" to="." method="_on_new_game_pressed"]

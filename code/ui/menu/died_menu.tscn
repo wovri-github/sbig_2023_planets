@@ -1,7 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4bxnhtbysf6u"]
+[gd_scene load_steps=6 format=3 uid="uid://c4bxnhtbysf6u"]
 
 [ext_resource type="Theme" uid="uid://clefja284aktg" path="res://code/ui/menu/default_theme.tres" id="1_ubj2q"]
 [ext_resource type="Script" path="res://code/ui/menu/died_menu.gd" id="2_obb3v"]
+
+[sub_resource type="EventAsset" id="EventAsset_ocho2"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Select"
+guid = "{43d191c0-e538-480e-b59c-454ca2c830e1}"
+name = "Select"
+
+[sub_resource type="EventAsset" id="EventAsset_5sq3x"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Confirm"
+guid = "{1e9a621e-e9d4-4ddf-8701-b1e42a6e0417}"
+name = "Confirm"
+
+[sub_resource type="EventAsset" id="EventAsset_mks7r"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Unpause"
+guid = "{954650f4-edfb-41e2-8818-42437037af56}"
+name = "Unpause"
 
 [node name="DiedMenu" type="PanelContainer"]
 anchors_preset = 8
@@ -43,6 +67,15 @@ text = "Settings"
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Exit"
+
+[node name="SelectSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_ocho2")
+
+[node name="ConfirmSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_5sq3x")
+
+[node name="UnpauseSound" type="StudioEventEmitter2D" parent="."]
+event = SubResource("EventAsset_mks7r")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Margin/VBox/Respawn" to="." method="_on_respawn_pressed"]

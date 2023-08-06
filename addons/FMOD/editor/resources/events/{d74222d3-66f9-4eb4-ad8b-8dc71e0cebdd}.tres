@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://o2jpn8nr8thx"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Flares/sound_flareup_3_player"
+guid = "{d74222d3-66f9-4eb4-ad8b-8dc71e0cebdd}"
+name = "sound_flareup_3_player"

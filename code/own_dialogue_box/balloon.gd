@@ -80,14 +80,16 @@ var dialogue_line: DialogueLine:
 			dialogue_label.type_out()
 
 			print(dialogue_line.character)
-			if dialogue_line.character == "Pick me":
+			if dialogue_line.character == "Pick-me":
 				$PickMeSpeaking.trigger()
-			elif dialogue_line.character == "Planet1":
+			elif dialogue_line.character == "Planet 1":
 				$Planet1Speaking.trigger()
-			elif dialogue_line.character == "Coo Coo":
+			elif dialogue_line.character == "Coo-coo-not-loco":
 				$CooCooSpeaking.trigger()
 			elif dialogue_line.character == "Sun":
 				$SunSpeaking.trigger()
+			elif dialogue_line.character == "":
+				$NarratorSpeaking.trigger()
 			await dialogue_label.finished_typing
 		# Wait for input
 		$NobodySpeaking.trigger()

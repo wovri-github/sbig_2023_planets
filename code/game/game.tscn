@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnytrcq0a2wyb"]
+[gd_scene load_steps=25 format=3 uid="uid://dnytrcq0a2wyb"]
 
 [ext_resource type="Script" path="res://code/game/game.gd" id="1_6tnbp"]
 [ext_resource type="Resource" uid="uid://dr76frs0beqo6" path="res://resources/minigame_data/intro.tres" id="2_dsky2"]
@@ -23,6 +23,14 @@
 [ext_resource type="Texture2D" uid="uid://dqs518asulx7a" path="res://assets/save.png" id="14_vkrnq"]
 [ext_resource type="Script" path="res://code/game/save_symbol.gd" id="15_isft5"]
 [ext_resource type="PackedScene" uid="uid://dqa125kr4om0v" path="res://code/settings/brightness.tscn" id="16_qkdjg"]
+
+[sub_resource type="EventAsset" id="EventAsset_q5gen"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Pause"
+guid = "{9c7ece2e-7c4a-4ade-b985-fdbc4f9da204}"
+name = "Pause"
 
 [node name="Game" type="CanvasLayer"]
 script = ExtResource("1_6tnbp")
@@ -83,6 +91,9 @@ expand_mode = 1
 script = ExtResource("15_isft5")
 
 [node name="Brightness" parent="UI" instance=ExtResource("16_qkdjg")]
+
+[node name="PauseSound" type="StudioEventEmitter2D" parent="UI"]
+event = SubResource("EventAsset_q5gen")
 
 [node name="Brightness" parent="." instance=ExtResource("16_qkdjg")]
 

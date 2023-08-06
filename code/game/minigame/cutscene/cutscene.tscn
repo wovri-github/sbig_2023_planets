@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://2efols75kede"]
 
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/cutscene.gd" id="1_haevn"]
-[ext_resource type="Resource" uid="uid://dqiv3y5xx5ddl" path="res://resources/minigame_data/sun_cutscene.tres" id="2_730o3"]
+[ext_resource type="Resource" uid="uid://ccen0get411cd" path="res://resources/minigame_data/coo_coo_cutscene2.tres" id="2_7fpne"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="3_rntc7"]
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/UI.gd" id="3_vt2jm"]
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="4_3jycv"]
@@ -276,7 +276,7 @@ _data = {
 
 [node name="Cutscene" type="Node2D"]
 script = ExtResource("1_haevn")
-minigame_debug_data = ExtResource("2_730o3")
+minigame_debug_data = ExtResource("2_7fpne")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_vt2jm")
@@ -299,12 +299,10 @@ color = Color(0, 0, 0, 1)
 [node name="Enemy" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
 position = Vector2(520, 180)
-flair_up_sounds = null
 
 [node name="Player" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
 position = Vector2(120, 180)
-flair_up_sounds = null
 planet_resource = ExtResource("4_3jycv")
 
 [node name="Camera2D" type="Camera2D" parent="."]

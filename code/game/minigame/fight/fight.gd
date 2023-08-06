@@ -20,12 +20,13 @@ func _ready():
 		self.process_mode = Node.PROCESS_MODE_DISABLED
 
 
-
 func enter(data: MinigameData):
 	$Enemy.planet_res = data.f_enemy_res
 	$Player.planet_res = $Player/Planet.planet_resource
 	current_turn = celestials[TURN.PLAYER]
 	current_turn._start_turn()
+
+
 
 func swap_turn():
 	current_turn._end_turn()

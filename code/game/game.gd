@@ -5,7 +5,7 @@ signal player_went_to_next_plot()
 
 @export var plot_minigames: Array[MinigameData]
 var current_minigame: Minigame
-var plot_tracker: int = 3#Storage.get_value("game", "plot_tracker", 0)
+var plot_tracker: int = Storage.get_value("game", "plot_tracker", 0)
 @onready var minigames = {
 	Minigame.TYPE.CUTSCENE: $Cutscene,
 	Minigame.TYPE.TRAVEL: $Travel,

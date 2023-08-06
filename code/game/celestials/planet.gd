@@ -35,7 +35,7 @@ var flair_up = 0:
 			$FlairUpSound.stop()
 		else:
 			$FlairUpStart.play()
-			$FlairUpSound.stream = flair_up_sounds[flair_up -1]
+			$FlairUpSound.stream = flair_up_sounds[min(2,flair_up -1)]
 			$FlairUpSound.play()
 var voices: Array
 var attack_sound: Array

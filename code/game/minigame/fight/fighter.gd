@@ -17,6 +17,7 @@ var planet_res: PlanetResource:
 		current_health = max_health
 		fight_manager.set_hp(fighter, current_health, max_health)
 		flair_up = 0
+		$Planet.idle()
 		setup_complete()
 		if planet_res.dialogue_name == "Planet 1":
 			max_flair_up = 2

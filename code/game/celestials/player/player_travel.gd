@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var linear_dumping = 1
 @export var exponential_dumping = 0.05
-@export var acceleration_factor = 10
+@export var acceleration_factor = 12
 
 #func _ready():
 #	$Planet.floating_tween.stop()

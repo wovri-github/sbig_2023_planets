@@ -52,7 +52,7 @@ scroll_active = false
 layout_mode = 2
 text = "Dialogue"
 skip_action = "skip"
-pause_at_characters = ".?!,"
+pause_at_characters = ".,"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]
 layout_mode = 2

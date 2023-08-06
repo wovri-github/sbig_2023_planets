@@ -3,7 +3,7 @@ extends Minigame
 
 
 @export var space_objects_tscn: Array[PackedScene]
-var sec_before_stoping_spawn: float = 10.0
+var sec_before_stoping_spawn: float = 5.0
 var spawn_point_width = 200
 
 var additional_nonliving_speed = 0

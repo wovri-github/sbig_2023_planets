@@ -1,10 +1,13 @@
 ~ first
+set was_tickle = false
+set was_sunglasses = false
+set was_joke = false 
 Sun: Simba?
 Pick-me: Ah no, but please let me join your universe! Here’s all the suggestions combined from my Planet Senpais!
 => selection
 
 ~ selection
-if true#was_sunglasses and was_tickle and was_joke
+if was_sunglasses and was_tickle and was_joke
 	Sun: Okey, okey. I will add you to my universe.
 	do emit("do_animation", "show_calendar")
 	: And thus, Pick-me-pretty-please got to join the Univrow Universe and the Solar Calendar too.

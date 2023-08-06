@@ -7,6 +7,6 @@ script = ExtResource("1_rr2ec")
 minigame_type = 1
 c_is_mad = false
 c_animation_name = ""
-t_minigame_time = 30
+t_minigame_time = 40
 t_sec_every_nonliving_spawn = 1.0
 t_additional_nonliving_speed = 0

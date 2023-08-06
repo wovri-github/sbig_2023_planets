@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var x_max = 30
 var speed_min = 50
-var speed_max = 200
+var speed_max = 150
 var additional_nonliving_speed:int = 0
 @export var force_factor = 120
 @export var scale_min = 0.5

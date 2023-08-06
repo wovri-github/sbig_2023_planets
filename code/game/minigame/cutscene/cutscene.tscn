@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://2efols75kede"]
 
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/cutscene.gd" id="1_haevn"]
-[ext_resource type="Resource" uid="uid://c65fdgetdo3fm" path="res://resources/minigame_data/planet1_cutscene2.tres" id="2_griy2"]
+[ext_resource type="Resource" uid="uid://dqiv3y5xx5ddl" path="res://resources/minigame_data/sun_cutscene.tres" id="2_60mmu"]
 [ext_resource type="PackedScene" uid="uid://fjloskjckncm" path="res://code/game/celestials/planet.tscn" id="3_rntc7"]
 [ext_resource type="Script" path="res://code/game/minigame/cutscene/UI.gd" id="3_vt2jm"]
 [ext_resource type="Resource" uid="uid://bliyuvo5345ac" path="res://resources/planet/pick_me.tres" id="4_3jycv"]
@@ -276,7 +276,7 @@ _data = {
 
 [node name="Cutscene" type="Node2D"]
 script = ExtResource("1_haevn")
-minigame_debug_data = ExtResource("2_griy2")
+minigame_debug_data = ExtResource("2_60mmu")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_vt2jm")

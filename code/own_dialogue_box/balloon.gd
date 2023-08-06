@@ -242,6 +242,10 @@ func _on_dialogue_label_spoke(letter, letter_index, speed):
 		$SpeakPlayer.set_stream(narrator_voice)
 	else:
 		$SpeakPlayer.set_stream(currently_talking.voices.pick_random())
+		if currently_talking.dialogue_name == "Sun":
+			$SpeakPlayer.bus = "Reverb"
+		else:
+			$SpeakPlayer.bus = "Master"
 	$SpeakPlayer.play()
 	if player.highlight == true:
 		if letter == "!":

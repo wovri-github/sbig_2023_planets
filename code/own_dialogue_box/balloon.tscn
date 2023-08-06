@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=6 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://code/own_dialogue_box/balloon.gd" id="1_aj661"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_h87yd"]
+[ext_resource type="AudioStream" uid="uid://bpkyqgdvvpd66" path="res://assets/sounds/sound_sun_speak_1.wav" id="3_jp6ll"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d24i"]
 content_margin_left = 40.0
@@ -72,6 +73,7 @@ meta_underlined = false
 hint_underlined = false
 
 [node name="SpeakPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jp6ll")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

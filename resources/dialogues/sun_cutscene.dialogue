@@ -18,8 +18,8 @@ else
 	- Tickle the Sun
 		set was_tickle = true
 		do emit("change_planet_animation", "tickle")
-		Pick-me: [i]tickle, tickle, tickle, tickle, tickle, tickle, tickle...
-		S un: Hahah,ahahah,ahhahah,ahha,...
+		Pick-me: [i]tickle, tickle, tickle, tickle, tickle, tickle, tickle
+		Sun: Hahah,ahahah,ahhahah,ahha,
 		=> selection
 	- Give Sunglasses to the Sun 
 		Pick-me: Here, [do emit("do_animation", "throw_sunglasses")] take the sunglasses!

@@ -25,6 +25,7 @@ Storage="*res://code/singletones/storage.gd"
 DialogueSignals="*res://code/singletones/dialogue_signals.gd"
 DialogueVaribles="*res://code/singletones/dialogue_varibles.gd"
 ButtonSounds="*res://code/singletones/button_sounds.tscn"
+Music="*res://code/singletones/Music.tscn"
 
 [dialogue_manager]
 

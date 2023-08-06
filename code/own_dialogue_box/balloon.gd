@@ -235,7 +235,7 @@ func _on_margin_resized() -> void:
 
 
 func _on_dialogue_label_spoke(letter, letter_index, speed):
-	if $SpeakPlayer.is_playing():
+	if $SpeakPlayer.is_playing() and $SpeakPlayer.get_playback_position() <= 0.1:
 		return
 	
 	if currently_talking == null:

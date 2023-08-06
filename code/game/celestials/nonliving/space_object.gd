@@ -33,6 +33,7 @@ func set_up_initial_movement():
 	prev_linear_velocity = linear_velocity
 
 func _on_body_entered(body):
+	$BounceSound.play()
 	if body is CharacterBody2D:
 		var rad_to_player = prev_linear_velocity.angle_to(body.global_position - self.global_position)
 		var speed_force_factor = max(0, -(abs(rad_to_player) - 1.5708)) * 5

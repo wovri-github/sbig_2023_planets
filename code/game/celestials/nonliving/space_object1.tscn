@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5xboqyyh4pu4"]
+[gd_scene load_steps=6 format=3 uid="uid://b5xboqyyh4pu4"]
 
 [ext_resource type="Script" path="res://code/game/celestials/nonliving/space_object.gd" id="1_nnpwh"]
 [ext_resource type="Texture2D" uid="uid://djesufj2jentt" path="res://assets/asteroid1.png" id="2_o767p"]
+[ext_resource type="AudioStream" uid="uid://c85phx3k6q086" path="res://assets/sounds/sound_player_boing.wav" id="3_muf0i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_71bg3"]
 friction = 0.0
@@ -36,6 +37,11 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_0nao6")
+
+[node name="BounceSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_muf0i")
+volume_db = -15.0
+pitch_scale = 0.7
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_entered" from="Pivot/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

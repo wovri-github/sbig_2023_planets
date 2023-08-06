@@ -3,5 +3,5 @@ Planet 1: Okayyy!! You have to convince the Sun. Maybe try tickling it! It alway
 
 Pick-me: Thank you! Here, [do emit("do_animation", "throw_bandaid")] take this bandaid.
 
-Planet 1: Ah and one important information! To win next fight you have to [b] cheat a little bit...
+Planet 1: Ah and one important information! To win next fight you have to [color=Cornflowerblue] cheat a little bit...
 => END

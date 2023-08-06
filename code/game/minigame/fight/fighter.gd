@@ -50,6 +50,8 @@ func setup_complete():
 	pass
 
 func get_damage(_damage: int):
+	$AudioStreamPlayer2D.stream = planet_res.hurt_sound.pick_random()
+	$AudioStreamPlayer2D.play()
 	current_health = max(0, current_health - _damage)
 	fight_manager.set_hp(fighter, current_health, max_health)
 	

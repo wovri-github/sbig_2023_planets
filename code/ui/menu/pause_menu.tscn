@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgpsmmld5orxv"]
+[gd_scene load_steps=5 format=3 uid="uid://bgpsmmld5orxv"]
 
 [ext_resource type="Theme" uid="uid://clefja284aktg" path="res://code/ui/menu/default_theme.tres" id="1_glqfj"]
 [ext_resource type="Script" path="res://code/ui/menu/pause_menu.gd" id="2_xdudt"]
+[ext_resource type="AudioStream" uid="uid://bbv1mcvj0buon" path="res://assets/sounds/sound_UI_pause.wav" id="3_ti0y3"]
+[ext_resource type="AudioStream" uid="uid://dh1nwbbrlxe5e" path="res://assets/sounds/sound_UI_unpause.wav" id="4_olmv7"]
 
 [node name="PauseMenu" type="PanelContainer"]
 modulate = Color(1, 1, 1, 0.8)
@@ -49,6 +51,12 @@ text = "Settings"
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Exit"
+
+[node name="PauseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ti0y3")
+
+[node name="UnPauseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_olmv7")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Margin/VBox/Resume" to="." method="_on_resume_pressed"]

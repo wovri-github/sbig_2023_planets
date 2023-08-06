@@ -3,8 +3,7 @@ extends Node2D
 class_name Planet
 
 
-@onready var  highlight_color = self.modulate
-@onready var  no_highlight_color = self.modulate * 0.9
+@export var flair_up_sounds: Array[AudioStream]
 @export var planet_resource: PlanetResource:
 	set(new_planet_res):
 		planet_resource = new_planet_res
@@ -13,6 +12,10 @@ class_name Planet
 		damage = planet_resource.damage
 		self.modulate = planet_resource.color
 		highlight_color = self.modulate
+		voices = planet_resource.voice
+		attack_sound = planet_resource.attack_sound
+		hurt_sound = planet_resource.hurt_sound
+		oh_sound = planet_resource.oh_sound
 		no_highlight_color = self.modulate * 0.9
 		if is_instance_valid(get_node_or_null("AnimatedSprite2D")):
 			$AnimatedSprite2D.sprite_frames = planet_resource.sprite_frames
@@ -25,7 +28,22 @@ var highlight := true:
 		else:
 			self.modulate = no_highlight_color
 var is_mad: bool = false
-var flair_up = 0
+var flair_up = 0:
+	set(val):
+		flair_up = val
+		if flair_up == 0:
+			$FlairUpSound.stop()
+		else:
+			$FlairUpStart.play()
+			$FlairUpSound.stream = flair_up_sounds[flair_up -1]
+			$FlairUpSound.play()
+var voices: Array
+var attack_sound: Array
+var hurt_sound: Array
+var oh_sound: Array
+
+@onready var highlight_color = self.modulate
+@onready var no_highlight_color = self.modulate * 0.9
 @onready var floating_tween: Tween = self.create_tween().set_loops()
 @onready var dialogue_name = planet_resource.dialogue_name
 @onready var health: int = planet_resource.health

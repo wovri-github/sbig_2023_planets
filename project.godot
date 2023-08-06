@@ -24,6 +24,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Storage="*res://code/singletones/storage.gd"
 DialogueSignals="*res://code/singletones/dialogue_signals.gd"
 DialogueVaribles="*res://code/singletones/dialogue_varibles.gd"
+ButtonSounds="*res://code/singletones/button_sounds.tscn"
 
 [dialogue_manager]
 

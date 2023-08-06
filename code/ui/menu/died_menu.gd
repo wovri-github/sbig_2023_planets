@@ -5,6 +5,10 @@ signal settings_clicked()
 func _on_visibility_changed():
 	if is_inside_tree():
 		get_tree().set_pause(self.is_visible())
+		if self.is_visible():
+			$PauseSound.play()
+		else:
+			$UnPauseSound.play()
 
 
 func _on_respawn_pressed():

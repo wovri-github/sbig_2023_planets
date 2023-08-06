@@ -185,6 +185,8 @@ enemy = NodePath("../Enemy")
 [node name="Planet" parent="Player" instance=ExtResource("4_a64nh")]
 planet_resource = ExtResource("5_gayi7")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+
 [node name="Enemy" type="Node2D" parent="." node_paths=PackedStringArray("fight_manager", "enemy")]
 position = Vector2(520, 180)
 script = ExtResource("5_jwdx6")
@@ -192,6 +194,9 @@ fight_manager = NodePath("../UI/FightManager")
 enemy = NodePath("../Player")
 
 [node name="Planet" parent="Enemy" instance=ExtResource("4_a64nh")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Enemy"]
+position = Vector2(-400, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 30)

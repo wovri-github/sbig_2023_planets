@@ -1,7 +1,11 @@
-[gd_resource type="Resource" script_class="PlanetResource" load_steps=3 format=3 uid="uid://yxqpplm63fu3"]
+[gd_resource type="Resource" script_class="PlanetResource" load_steps=7 format=3 uid="uid://yxqpplm63fu3"]
 
 [ext_resource type="Script" path="res://code/game/celestials/planet_resource.gd" id="1_hs5dx"]
+[ext_resource type="AudioStream" uid="uid://br4i8f6emauit" path="res://assets/sounds/sound_planet_attack.wav" id="1_x38bi"]
 [ext_resource type="SpriteFrames" uid="uid://duwn1bv8ombch" path="res://assets/Planet1.tres" id="2_gfm0e"]
+[ext_resource type="AudioStream" uid="uid://cnx6gpgododso" path="res://assets/sounds/sound_planet_hurt_1.wav" id="2_j516f"]
+[ext_resource type="AudioStream" uid="uid://b6slqtt0yxgvp" path="res://assets/sounds/sound_planet_oh_1.wav" id="3_allxn"]
+[ext_resource type="AudioStream" uid="uid://cq01bxqah3grd" path="res://assets/sounds/sound_planet_speak_1.wav" id="3_s3cwf"]
 
 [resource]
 script = ExtResource("1_hs5dx")
@@ -10,3 +14,7 @@ dialogue_name = "Planet 1"
 color = Color(1, 1, 1, 1)
 health = 70
 damage = 10
+voice = Array[AudioStream]([ExtResource("3_s3cwf")])
+attack_sound = Array[AudioStream]([ExtResource("1_x38bi")])
+hurt_sound = Array[AudioStream]([ExtResource("2_j516f")])
+oh_sound = Array[AudioStream]([ExtResource("3_allxn")])

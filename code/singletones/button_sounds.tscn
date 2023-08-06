@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://raykl1pc2spe"]
+
+[ext_resource type="Script" path="res://code/singletones/button_sounds.gd" id="1_vptxi"]
+[ext_resource type="AudioStream" uid="uid://cev03rfate288" path="res://assets/sounds/sound_UI_confirm.wav" id="2_juxdn"]
+[ext_resource type="AudioStream" uid="uid://cr4fwhh5lpvbn" path="res://assets/sounds/sound_UI_select.wav" id="2_minpq"]
+
+[node name="ButtonSounds" type="Node"]
+script = ExtResource("1_vptxi")
+
+[node name="SelectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_minpq")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_juxdn")

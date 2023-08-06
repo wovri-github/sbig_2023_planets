@@ -3,6 +3,9 @@ extends CanvasLayer
 
 var player: Node
 var enemy: Node
+var narrator_voice = load("res://assets/sounds/sound_narrator_speak_1.wav")
+
+var currently_talking = null
 
 @onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
@@ -41,12 +44,15 @@ var dialogue_line: DialogueLine:
 		
 		if is_instance_valid(enemy) and is_instance_valid(player):
 			if dialogue_line.character == player.dialogue_name:
+				currently_talking = player
 				player.highlight = true
 				enemy.highlight = false
 			elif dialogue_line.character == enemy.dialogue_name:
+				currently_talking = enemy
 				player.highlight = false
 				enemy.highlight = true
 			else:
+				currently_talking = null
 				player.highlight = false
 				enemy.highlight = false
 		
@@ -229,6 +235,14 @@ func _on_margin_resized() -> void:
 
 
 func _on_dialogue_label_spoke(letter, letter_index, speed):
+	if $SpeakPlayer.is_playing():
+		return
+	
+	if currently_talking == null:
+		$SpeakPlayer.set_stream(narrator_voice)
+	else:
+		$SpeakPlayer.set_stream(currently_talking.voices.pick_random())
+	$SpeakPlayer.play()
 	if player.highlight == true:
 		if letter == "!":
 			player.scream()

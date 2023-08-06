@@ -25,4 +25,5 @@ func movement():
 
 
 func knockback(force, from_position):
+	$AudioStreamPlayer2D.play()
 	velocity = (global_position - from_position).normalized() * force

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="PlanetResource" load_steps=4 format=3 uid="uid://syelkxn4mm6a"]
+[gd_resource type="Resource" script_class="PlanetResource" load_steps=5 format=3 uid="uid://syelkxn4mm6a"]
 
 [ext_resource type="Script" path="res://code/game/celestials/planet_resource.gd" id="1_vpdcg"]
 [ext_resource type="Texture2D" uid="uid://dxmmy4i1ahh7q" path="res://assets/white_circle.png" id="2_8ostg"]
+[ext_resource type="AudioStream" uid="uid://2jld4nk4xb48" path="res://assets/sounds/sound_narrator_speak_1.wav" id="3_duog2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iin48"]
 animations = [{
@@ -21,3 +22,4 @@ dialogue_name = "Planet"
 color = Color(0.65098, 0.6, 0.862745, 1)
 health = 10
 damage = 10
+voice = Array[AudioStream]([ExtResource("3_duog2")])

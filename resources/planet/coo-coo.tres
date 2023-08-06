@@ -1,7 +1,20 @@
-[gd_resource type="Resource" script_class="PlanetResource" load_steps=3 format=3 uid="uid://nnxlrpxb2hgj"]
+[gd_resource type="Resource" script_class="PlanetResource" load_steps=16 format=3 uid="uid://nnxlrpxb2hgj"]
 
+[ext_resource type="AudioStream" uid="uid://y5aqncmjm481" path="res://assets/sounds/sound_coocoo_attack.wav" id="1_l6jh0"]
 [ext_resource type="Script" path="res://code/game/celestials/planet_resource.gd" id="1_xfu06"]
+[ext_resource type="AudioStream" uid="uid://ch0ltd43rcvti" path="res://assets/sounds/sound_coocoo_hurt_1.wav" id="2_ishjc"]
 [ext_resource type="SpriteFrames" uid="uid://bh5yqq5qyx4fr" path="res://assets/coo-coo.tres" id="2_pepod"]
+[ext_resource type="AudioStream" uid="uid://bf4ctus1px4fn" path="res://assets/sounds/sound_coocoo_hurt_2.wav" id="3_2lehe"]
+[ext_resource type="AudioStream" uid="uid://c2pnsyodgbsvs" path="res://assets/sounds/sound_coocoo_speak_1.wav" id="3_sibff"]
+[ext_resource type="AudioStream" uid="uid://c2vgx4h01ldgk" path="res://assets/sounds/sound_coocoo_speak_2.wav" id="4_78xat"]
+[ext_resource type="AudioStream" uid="uid://ck32q8i7l88tt" path="res://assets/sounds/sound_coocoo_oh_1.wav" id="4_dgrf6"]
+[ext_resource type="AudioStream" uid="uid://rrwark4dc4iy" path="res://assets/sounds/sound_coocoo_oh_2.wav" id="5_e64pr"]
+[ext_resource type="AudioStream" uid="uid://bh4uxcan6714l" path="res://assets/sounds/sound_coocoo_speak_3.wav" id="5_wg8qk"]
+[ext_resource type="AudioStream" uid="uid://bryeu7ctsqwjt" path="res://assets/sounds/sound_coocoo_speak_4.wav" id="6_00u30"]
+[ext_resource type="AudioStream" uid="uid://cqc4vrvlwcylb" path="res://assets/sounds/sound_coocoo_speak_5.wav" id="7_tq8yn"]
+[ext_resource type="AudioStream" uid="uid://ops1vlvwboyw" path="res://assets/sounds/sound_coocoo_speak_6.wav" id="8_o4c6e"]
+[ext_resource type="AudioStream" uid="uid://cpdof7xr21del" path="res://assets/sounds/sound_coocoo_speak_7.wav" id="9_5h86p"]
+[ext_resource type="AudioStream" uid="uid://cxkr1tq2mq7o5" path="res://assets/sounds/sound_coocoo_speak_8.wav" id="10_blvpu"]
 
 [resource]
 script = ExtResource("1_xfu06")
@@ -10,3 +23,7 @@ dialogue_name = "Coo-coo-not-loco"
 color = Color(1, 1, 1, 1)
 health = 200
 damage = 30
+voice = Array[AudioStream]([ExtResource("3_sibff"), ExtResource("4_78xat"), ExtResource("5_wg8qk"), ExtResource("6_00u30"), ExtResource("7_tq8yn"), ExtResource("8_o4c6e"), ExtResource("9_5h86p"), ExtResource("10_blvpu")])
+attack_sound = Array[AudioStream]([ExtResource("1_l6jh0")])
+hurt_sound = Array[AudioStream]([ExtResource("2_ishjc"), ExtResource("3_2lehe")])
+oh_sound = Array[AudioStream]([ExtResource("4_dgrf6"), ExtResource("5_e64pr")])

@@ -44,6 +44,10 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Exit"
 
+[node name="PauseSound" type="AudioStreamPlayer" parent="."]
+
+[node name="UnPauseSound" type="AudioStreamPlayer" parent="."]
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Margin/VBox/Respawn" to="." method="_on_respawn_pressed"]
 [connection signal="pressed" from="Margin/VBox/Settings" to="." method="_on_settings_pressed"]

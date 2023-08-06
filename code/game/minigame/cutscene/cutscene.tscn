@@ -299,10 +299,12 @@ color = Color(0, 0, 0, 1)
 [node name="Enemy" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
 position = Vector2(520, 180)
+flair_up_sounds = null
 
 [node name="Player" parent="." instance=ExtResource("3_rntc7")]
 unique_name_in_owner = true
 position = Vector2(120, 180)
+flair_up_sounds = null
 planet_resource = ExtResource("4_3jycv")
 
 [node name="Camera2D" type="Camera2D" parent="."]

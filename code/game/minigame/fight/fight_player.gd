@@ -27,6 +27,8 @@ func end_turn():
 
 
 func _on_attack_pressed():
+	$AudioStreamPlayer2D.stream = planet_res.attack_sound.pick_random()
+	$AudioStreamPlayer2D.play()
 	$"../AnimationPlayer".play("player_attack")
 
 func reset_flair_up():

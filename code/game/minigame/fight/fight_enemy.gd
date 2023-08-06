@@ -26,6 +26,8 @@ func start_turn():
 			emit_signal("turn_ended")
 			return
 		is_first_attack = false
+		$AudioStreamPlayer2D.stream = planet_res.attack_sound.pick_random()
+		$AudioStreamPlayer2D.play()
 		$"../AnimationPlayer".play("enemy_attack")
 	if randf() <= 0.5:
 		if flair_up < max_flair_up:
@@ -35,8 +37,12 @@ func start_turn():
 			await $Planet/AnimatedSprite2D.animation_finished
 			emit_signal("turn_ended")
 			return
+		$AudioStreamPlayer2D.stream = planet_res.attack_sound.pick_random()
+		$AudioStreamPlayer2D.play()
 		$"../AnimationPlayer".play("enemy_attack")
 	else:
+		$AudioStreamPlayer2D.stream = planet_res.attack_sound.pick_random()
+		$AudioStreamPlayer2D.play()
 		$"../AnimationPlayer".play("enemy_attack")
 		
 	

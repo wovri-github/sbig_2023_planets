@@ -1,5 +1,6 @@
 SuperDuperGame for SBIG GameJam 2023
-[Link to the game:](https://wovri.itch.io/the-ultimate-pick-me-adventure-joining-the-unibrow-universe)https://wovri.itch.io/the-ultimate-pick-me-adventure-joining-the-unibrow-universe
+[Link to the game](https://wovri.itch.io/the-ultimate-pick-me-adventure-joining-the-unibrow-universe)
+
 
 A "So Bad It's Good 2023" Game Jam Entry!
 

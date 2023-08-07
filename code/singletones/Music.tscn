@@ -1,15 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh06idqa730fn"]
+[gd_scene load_steps=2 format=3 uid="uid://dh06idqa730fn"]
 
 [ext_resource type="Script" path="res://code/singletones/music.gd" id="1_mbcje"]
-[ext_resource type="AudioStream" uid="uid://c4anw3auoxkl4" path="res://assets/music/start_sound.wav" id="2_fhvfs"]
-[ext_resource type="AudioStream" uid="uid://cr8ci0rmjdro2" path="res://assets/music/fight.wav" id="3_44bbw"]
 
 [node name="Music" type="Node"]
 script = ExtResource("1_mbcje")
-background_sounds = Array[AudioStream]([ExtResource("2_fhvfs"), ExtResource("3_44bbw")])
 
 [node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_44bbw")
 volume_db = -80.0
-
-[connection signal="finished" from="BackgroundSound" to="." method="_on_background_sound_finished"]

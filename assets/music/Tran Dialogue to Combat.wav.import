@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckpqb17ic2is5"
+path="res://.godot/imported/Tran Dialogue to Combat.wav-e0df80a1b2b77aabd43accfe0681228a.sample"
+
+[deps]
+
+source_file="res://assets/music/Tran Dialogue to Combat.wav"
+dest_files=["res://.godot/imported/Tran Dialogue to Combat.wav-e0df80a1b2b77aabd43accfe0681228a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhhe3hcp88lfl"
+path="res://.godot/imported/Tran Ambience to Dialogue Boss.wav-a7cf1887fdc213b646594089de8d07f9.sample"
+
+[deps]
+
+source_file="res://assets/music/Tran Ambience to Dialogue Boss.wav"
+dest_files=["res://.godot/imported/Tran Ambience to Dialogue Boss.wav-a7cf1887fdc213b646594089de8d07f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

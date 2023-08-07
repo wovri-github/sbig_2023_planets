@@ -6,6 +6,11 @@ signal player_went_to_next_plot()
 @export var plot_minigames: Array[MinigameData]
 var current_minigame: Minigame
 var plot_tracker: int = Storage.get_value("game", "plot_tracker", 0)
+var music_correlation = {
+	Minigame.TYPE.CUTSCENE: Music.TYPE.CUTSCENE,
+	Minigame.TYPE.TRAVEL: Music.TYPE.TRAVEL,
+	Minigame.TYPE.FIGHT: Music.TYPE.FIGHT,
+}
 @onready var minigames = {
 	Minigame.TYPE.CUTSCENE: $Cutscene,
 	Minigame.TYPE.TRAVEL: $Travel,
@@ -16,6 +21,7 @@ var plot_tracker: int = Storage.get_value("game", "plot_tracker", 0)
 
 func _ready():
 	current_minigame = minigames[plot_minigames[plot_tracker].minigame_type]
+	Music.play_music = music_correlation[plot_minigames[plot_tracker].minigame_type]
 	current_minigame._enter(plot_minigames[plot_tracker])
 
 func change_current_game(change_to: Minigame.TYPE, data: MinigameData = null):
@@ -35,6 +41,10 @@ func next_game_plot():
 	change_current_game(minigame_data.minigame_type, minigame_data)
 
 func make_transition(change_to: Minigame.TYPE):
+	if plot_tracker == 10:
+		Music.play_music = Music.TYPE.BOSS_FIGHT
+	else:
+		Music.play_music = music_correlation[change_to]
 	if change_to == Minigame.TYPE.CUTSCENE or change_to == Minigame.TYPE.FIGHT:
 		$Background.is_moving = false
 	else:

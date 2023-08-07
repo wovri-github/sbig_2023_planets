@@ -52,6 +52,8 @@ func show_dialogue_balloon(resource: DialogueResource, title: String = "0", extr
 	balloon.start(resource, title, extra_game_states)
 
 func _on_do_animation(anim_name, is_reverse = false):
+	if anim_name == "show_calendar":
+		Music.play_music = Music.TYPE.WIN
 	if is_reverse:
 		$AnimationPlayer.play(anim_name, -1, -1, true)
 	else:
